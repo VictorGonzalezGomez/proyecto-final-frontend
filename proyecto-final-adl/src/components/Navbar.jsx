@@ -1,15 +1,10 @@
 const Navbar = () => {
     return (
-        // create a sticky top, transparent navbar with a logo and four links on the left and a register button on the right
-
         <>
-            
             <nav className="navbar navbar-expand-lg navbar-light bg-light sticky-top">
                 <div className="container">
-                    <a className="navbar-brand" href="#">
-                        <h1>
-                            Logo
-                        </h1>
+                    <a className="navbar-brand" href="/">
+                        <h1>Logo</h1>
                     </a>
                     <button
                         className="navbar-toggler"
@@ -34,22 +29,29 @@ const Navbar = () => {
                                 </a>
                             </li>
                             <li className="nav-item">
-                                <a className="nav-link" href="#">
+                                <a className="nav-link" href="#features-1">
+                                    About us
+                                </a>
+                            </li>
+                            <li className="nav-item">
+                                <a className="nav-link" href="#system-features">
                                     Features
                                 </a>
                             </li>
                             <li className="nav-item">
-                                <a className="nav-link" href="#">
+                                <a className="nav-link" href="#pricing">
                                     Pricing
                                 </a>
                             </li>
+                            
                             <li className="nav-item">
-                                <a className="nav-link disabled">Disabled</a>
+                                <a className="nav-link" href="#faq">
+                                    FAQ
+                                </a>
                             </li>
                         </ul>
                     </div>
                     <div className="d-flex">
-
                         <button
                             className="btn btn-outline-success"
                             type="submit"

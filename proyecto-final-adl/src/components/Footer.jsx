@@ -35,43 +35,23 @@ const Footer = () => {
                                     name
                                 </h6>
                                 <p>
-                                    Here you can use rows and columns to
-                                    organize your footer content. Lorem ipsum
-                                    dolor sit amet, consectetur adipisicing
-                                    elit.
+                                    Lorem ipsum dolor sit amet consectetur
+                                    adipisicing elit. Pariatur, aspernatur.
+                                    Mollitia blanditiis, eius adipisci nostrum,
+                                    iusto repellat iure architecto praesentium
+                                    hic fugiat possimus voluptate.
                                 </p>
                             </div>
 
                             <div className="col-md-2 col-lg-2 col-xl-2 mx-auto mb-4">
                                 <h6 className="text-uppercase fw-bold mb-4">
-                                    Products
+                                    About us
                                 </h6>
                                 <p>
                                     <a href="#!" className="text-reset">
-                                        Angular
+                                        Functionalities
                                     </a>
                                 </p>
-                                <p>
-                                    <a href="#!" className="text-reset">
-                                        React
-                                    </a>
-                                </p>
-                                <p>
-                                    <a href="#!" className="text-reset">
-                                        Vue
-                                    </a>
-                                </p>
-                                <p>
-                                    <a href="#!" className="text-reset">
-                                        Laravel
-                                    </a>
-                                </p>
-                            </div>
-
-                            <div className="col-md-3 col-lg-2 col-xl-2 mx-auto mb-4">
-                                <h6 className="text-uppercase fw-bold mb-4">
-                                    Useful links
-                                </h6>
                                 <p>
                                     <a href="#!" className="text-reset">
                                         Pricing
@@ -79,40 +59,50 @@ const Footer = () => {
                                 </p>
                                 <p>
                                     <a href="#!" className="text-reset">
-                                        Settings
+                                        Terms and conditions
                                     </a>
                                 </p>
                                 <p>
                                     <a href="#!" className="text-reset">
-                                        Orders
+                                        Work with us
+                                    </a>
+                                </p>
+                            </div>
+
+                            <div className="col-md-3 col-lg-2 col-xl-2 mx-auto mb-4">
+                                <h6 className="text-uppercase fw-bold mb-4">
+                                    Help material
+                                </h6>
+                                <p>
+                                    <a href="#!" className="text-reset">
+                                        FAQ
                                     </a>
                                 </p>
                                 <p>
                                     <a href="#!" className="text-reset">
-                                        Help
+                                        Blog
                                     </a>
                                 </p>
+                                <p>
+                                    <a href="#!" className="text-reset">
+                                        Help center
+                                    </a>
+                                </p>
+                                
                             </div>
 
                             <div className="col-md-4 col-lg-3 col-xl-3 mx-auto mb-md-0 mb-4">
                                 <h6 className="text-uppercase fw-bold mb-4">
                                     Contact
                                 </h6>
-                                <p>
-                                    <i className="fas fa-home me-3"></i> New
-                                    York, NY 10012, US
-                                </p>
+            
                                 <p>
                                     <i className="fas fa-envelope me-3"></i>
                                     info@example.com
                                 </p>
                                 <p>
-                                    <i className="fas fa-phone me-3"></i> + 01
-                                    234 567 88
-                                </p>
-                                <p>
-                                    <i className="fas fa-print me-3"></i> + 01
-                                    234 567 89
+                                    <i className="fas fa-phone me-3"></i>
+                                    (+56) 9 2391 4488
                                 </p>
                             </div>
                         </div>
@@ -120,10 +110,12 @@ const Footer = () => {
                 </section>
             </div>
 
-            <div
-                className="text-center p-4" >
+            <div className="text-center p-4">
                 © 2023 Copyright:
-                <a className="text-reset fw-bold" href="https://mdbootstrap.com/">
+                <a
+                    className="text-reset fw-bold"
+                    href="/"
+                >
                     Desafio Latam
                 </a>
             </div>
