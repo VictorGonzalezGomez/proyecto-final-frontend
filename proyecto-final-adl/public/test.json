@@ -1,0 +1,642 @@
+{
+    "store": [
+      {
+        "id": 1,
+        "name": "ELECTRONICA ESTEBAN SA",
+        "rut": "81.201.000-k",
+        "industry": "Retail",
+        "address": "AV LOS LEONES 20321, PROVIDENCIA"
+      },
+      {
+        "id": 2,
+        "name": "BOTILLERIA LA PREVIA SA",
+        "rut": "99.554.560-8",
+        "industry": "Venta de Bebidas Alcoholicas",
+        "address": "AV VICUÑA MACKENNA 2301, SAN JOAQUIN"
+      },
+      {
+        "id": 3,
+        "name": "ALMACEN JULIA SPA",
+        "rut": "96.529.310-8",
+        "industry": "Venta articulos consumo masivo",
+        "address": "AGUSTINAS 1343, SANTIAGO"
+      }
+    ],
+    "producto": [
+      {
+        "id": 1,
+        "SKU": 1174065,
+        "name": "Hisense Smart TV LED 65",
+        "description": "Hisense Smart TV 65 Pulgadas LED 65A6H",
+        "unit_price": 439990,
+        "store_id": 1
+      },
+      {
+        "id": 2,
+        "SKU": 1173888,
+        "name": "Celular Xiaomi Poco M5 128GB Negro",
+        "description": "Celular Xiaomi Poco M5 4GB RAM 128GB Negro 6,58'' Liberado",
+        "unit_price": 189990,
+        "store_id": 1
+      },
+      {
+        "id": 3,
+        "SKU": 1176338,
+        "name": "Notebook Asus Zenbook i7 16GB Ram",
+        "description": "Notebook Asus Zenbook Intel Core i7, 16GB RAM, 512GB SSD, 13,3\"",
+        "unit_price": 899990,
+        "store_id": 1
+      },
+      {
+        "id": 4,
+        "SKU": 1821223,
+        "name": "Cerveza Sol 18x330ml",
+        "description": "Pack 18 un. Cerveza Sol 330 cc",
+        "unit_price": 12990,
+        "store_id": 2
+      },
+      {
+        "id": 5,
+        "SKU": 1800112,
+        "name": "Cerveza Coors 6x355ml",
+        "description": "Pack 6 un. Cerveza Coors Stubby 5° botella 355 cc",
+        "unit_price": 5890,
+        "store_id": 2
+      },
+      {
+        "id": 6,
+        "SKU": 1560566,
+        "name": "Cerveza Kunstmann Torobayo 12x330ml",
+        "description": "Pack 12 un. Cerveza Kunstmann Torobayo botella 330 cc",
+        "unit_price": 12990,
+        "store_id": 2
+      },
+      {
+        "id": 7,
+        "SKU": 264603,
+        "name": "Arroz Tucapel grado 2 blue bonnet 1kg",
+        "description": "Arroz grado 2 blue grano largo y delgado 1 kg",
+        "unit_price": 1289,
+        "store_id": 3
+      },
+      {
+        "id": 8,
+        "SKU": 549378,
+        "name": "Aceite Miraflores Vegetal 1L",
+        "description": "Aceite Vegetal 1 litro Miraflores",
+        "unit_price": 2979,
+        "store_id": 3
+      },
+      {
+        "id": 9,
+        "SKU": 267236,
+        "name": "Sal fina Lobos 1 kg",
+        "description": "Sal fina 1 kg 1 un Lobos",
+        "unit_price": 529,
+        "store_id": 3
+      }
+    ],
+    "producto_sales": [
+      {
+        "id": 1,
+        "product_id": 6,
+        "sales_id": 1,
+        "quantity": 4
+      },
+      {
+        "id": 2,
+        "product_id": 7,
+        "sales_id": 2,
+        "quantity": 2
+      },
+      {
+        "id": 3,
+        "product_id": 6,
+        "sales_id": 3,
+        "quantity": 4
+      },
+      {
+        "id": 4,
+        "product_id": 7,
+        "sales_id": 4,
+        "quantity": 3
+      },
+      {
+        "id": 5,
+        "product_id": 3,
+        "sales_id": 5,
+        "quantity": 3
+      },
+      {
+        "id": 6,
+        "product_id": 1,
+        "sales_id": 6,
+        "quantity": 1
+      },
+      {
+        "id": 7,
+        "product_id": 2,
+        "sales_id": 7,
+        "quantity": 1
+      },
+      {
+        "id": 8,
+        "product_id": 4,
+        "sales_id": 8,
+        "quantity": 1
+      },
+      {
+        "id": 9,
+        "product_id": 7,
+        "sales_id": 9,
+        "quantity": 2
+      },
+      {
+        "id": 10,
+        "product_id": 6,
+        "sales_id": 10,
+        "quantity": 4
+      },
+      {
+        "id": 11,
+        "product_id": 1,
+        "sales_id": 11,
+        "quantity": 5
+      },
+      {
+        "id": 12,
+        "product_id": 8,
+        "sales_id": 12,
+        "quantity": 1
+      },
+      {
+        "id": 13,
+        "product_id": 7,
+        "sales_id": 13,
+        "quantity": 4
+      },
+      {
+        "id": 14,
+        "product_id": 9,
+        "sales_id": 14,
+        "quantity": 1
+      },
+      {
+        "id": 15,
+        "product_id": 7,
+        "sales_id": 15,
+        "quantity": 1
+      },
+      {
+        "id": 16,
+        "product_id": 7,
+        "sales_id": 16,
+        "quantity": 1
+      },
+      {
+        "id": 17,
+        "product_id": 3,
+        "sales_id": 17,
+        "quantity": 2
+      },
+      {
+        "id": 18,
+        "product_id": 7,
+        "sales_id": 18,
+        "quantity": 5
+      },
+      {
+        "id": 19,
+        "product_id": 9,
+        "sales_id": 19,
+        "quantity": 3
+      },
+      {
+        "id": 20,
+        "product_id": 5,
+        "sales_id": 20,
+        "quantity": 4
+      },
+      {
+        "id": 21,
+        "product_id": 4,
+        "sales_id": 21,
+        "quantity": 3
+      },
+      {
+        "id": 22,
+        "product_id": 4,
+        "sales_id": 22,
+        "quantity": 3
+      },
+      {
+        "id": 23,
+        "product_id": 2,
+        "sales_id": 23,
+        "quantity": 3
+      },
+      {
+        "id": 24,
+        "product_id": 8,
+        "sales_id": 24,
+        "quantity": 3
+      },
+      {
+        "id": 25,
+        "product_id": 5,
+        "sales_id": 25,
+        "quantity": 3
+      },
+      {
+        "id": 26,
+        "product_id": 2,
+        "sales_id": 26,
+        "quantity": 5
+      },
+      {
+        "id": 27,
+        "product_id": 2,
+        "sales_id": 27,
+        "quantity": 4
+      },
+      {
+        "id": 28,
+        "product_id": 6,
+        "sales_id": 28,
+        "quantity": 4
+      },
+      {
+        "id": 29,
+        "product_id": 8,
+        "sales_id": 29,
+        "quantity": 4
+      },
+      {
+        "id": 30,
+        "product_id": 8,
+        "sales_id": 30,
+        "quantity": 3
+      },
+      {
+        "id": 31,
+        "product_id": 6,
+        "sales_id": 31,
+        "quantity": 1
+      },
+      {
+        "id": 32,
+        "product_id": 7,
+        "sales_id": 32,
+        "quantity": 5
+      },
+      {
+        "id": 33,
+        "product_id": 6,
+        "sales_id": 33,
+        "quantity": 4
+      },
+      {
+        "id": 34,
+        "product_id": 3,
+        "sales_id": 34,
+        "quantity": 2
+      },
+      {
+        "id": 35,
+        "product_id": 8,
+        "sales_id": 35,
+        "quantity": 4
+      },
+      {
+        "id": 36,
+        "product_id": 3,
+        "sales_id": 36,
+        "quantity": 1
+      },
+      {
+        "id": 37,
+        "product_id": 9,
+        "sales_id": 37,
+        "quantity": 2
+      },
+      {
+        "id": 38,
+        "product_id": 9,
+        "sales_id": 38,
+        "quantity": 5
+      },
+      {
+        "id": 39,
+        "product_id": 2,
+        "sales_id": 39,
+        "quantity": 2
+      },
+      {
+        "id": 40,
+        "product_id": 2,
+        "sales_id": 40,
+        "quantity": 4
+      },
+      {
+        "id": 41,
+        "product_id": 4,
+        "sales_id": 41,
+        "quantity": 3
+      },
+      {
+        "id": 42,
+        "product_id": 5,
+        "sales_id": 42,
+        "quantity": 4
+      },
+      {
+        "id": 43,
+        "product_id": 9,
+        "sales_id": 43,
+        "quantity": 4
+      },
+      {
+        "id": 44,
+        "product_id": 3,
+        "sales_id": 44,
+        "quantity": 4
+      },
+      {
+        "id": 45,
+        "product_id": 1,
+        "sales_id": 45,
+        "quantity": 1
+      },
+      {
+        "id": 46,
+        "product_id": 6,
+        "sales_id": 46,
+        "quantity": 4
+      },
+      {
+        "id": 47,
+        "product_id": 8,
+        "sales_id": 47,
+        "quantity": 5
+      },
+      {
+        "id": 48,
+        "product_id": 2,
+        "sales_id": 48,
+        "quantity": 1
+      },
+      {
+        "id": 49,
+        "product_id": 6,
+        "sales_id": 49,
+        "quantity": 5
+      }
+    ],
+    "sales": [
+      {
+        "id": 1,
+        "total_price": 51960,
+        "date": 44993
+      },
+      {
+        "id": 2,
+        "total_price": 2578,
+        "date": 44997
+      },
+      {
+        "id": 3,
+        "total_price": 51960,
+        "date": 44991
+      },
+      {
+        "id": 4,
+        "total_price": 3867,
+        "date": 44991
+      },
+      {
+        "id": 5,
+        "total_price": 2699970,
+        "date": 44987
+      },
+      {
+        "id": 6,
+        "total_price": 439990,
+        "date": 44986
+      },
+      {
+        "id": 7,
+        "total_price": 189990,
+        "date": 44995
+      },
+      {
+        "id": 8,
+        "total_price": 12990,
+        "date": 44993
+      },
+      {
+        "id": 9,
+        "total_price": 2578,
+        "date": 44995
+      },
+      {
+        "id": 10,
+        "total_price": 51960,
+        "date": 44992
+      },
+      {
+        "id": 11,
+        "total_price": 2199950,
+        "date": 44996
+      },
+      {
+        "id": 12,
+        "total_price": 2979,
+        "date": 44990
+      },
+      {
+        "id": 13,
+        "total_price": 5156,
+        "date": 44992
+      },
+      {
+        "id": 14,
+        "total_price": 529,
+        "date": 44996
+      },
+      {
+        "id": 15,
+        "total_price": 1289,
+        "date": 44996
+      },
+      {
+        "id": 16,
+        "total_price": 1289,
+        "date": 44990
+      },
+      {
+        "id": 17,
+        "total_price": 1799980,
+        "date": 44993
+      },
+      {
+        "id": 18,
+        "total_price": 6445,
+        "date": 44986
+      },
+      {
+        "id": 19,
+        "total_price": 1587,
+        "date": 44989
+      },
+      {
+        "id": 20,
+        "total_price": 23560,
+        "date": 44987
+      },
+      {
+        "id": 21,
+        "total_price": 38970,
+        "date": 44991
+      },
+      {
+        "id": 22,
+        "total_price": 38970,
+        "date": 44989
+      },
+      {
+        "id": 23,
+        "total_price": 569970,
+        "date": 44988
+      },
+      {
+        "id": 24,
+        "total_price": 8937,
+        "date": 44996
+      },
+      {
+        "id": 25,
+        "total_price": 17670,
+        "date": 44996
+      },
+      {
+        "id": 26,
+        "total_price": 949950,
+        "date": 44986
+      },
+      {
+        "id": 27,
+        "total_price": 759960,
+        "date": 44986
+      },
+      {
+        "id": 28,
+        "total_price": 51960,
+        "date": 44987
+      },
+      {
+        "id": 29,
+        "total_price": 11916,
+        "date": 44997
+      },
+      {
+        "id": 30,
+        "total_price": 8937,
+        "date": 44993
+      },
+      {
+        "id": 31,
+        "total_price": 12990,
+        "date": 44987
+      },
+      {
+        "id": 32,
+        "total_price": 6445,
+        "date": 44986
+      },
+      {
+        "id": 33,
+        "total_price": 51960,
+        "date": 44996
+      },
+      {
+        "id": 34,
+        "total_price": 1799980,
+        "date": 44991
+      },
+      {
+        "id": 35,
+        "total_price": 11916,
+        "date": 44995
+      },
+      {
+        "id": 36,
+        "total_price": 899990,
+        "date": 44993
+      },
+      {
+        "id": 37,
+        "total_price": 1058,
+        "date": 44992
+      },
+      {
+        "id": 38,
+        "total_price": 2645,
+        "date": 44992
+      },
+      {
+        "id": 39,
+        "total_price": 379980,
+        "date": 44986
+      },
+      {
+        "id": 40,
+        "total_price": 759960,
+        "date": 44992
+      },
+      {
+        "id": 41,
+        "total_price": 38970,
+        "date": 44986
+      },
+      {
+        "id": 42,
+        "total_price": 23560,
+        "date": 44989
+      },
+      {
+        "id": 43,
+        "total_price": 2116,
+        "date": 44997
+      },
+      {
+        "id": 44,
+        "total_price": 3599960,
+        "date": 44992
+      },
+      {
+        "id": 45,
+        "total_price": 439990,
+        "date": 44993
+      },
+      {
+        "id": 46,
+        "total_price": 51960,
+        "date": 44994
+      },
+      {
+        "id": 47,
+        "total_price": 14895,
+        "date": 44996
+      },
+      {
+        "id": 48,
+        "total_price": 189990,
+        "date": 44997
+      },
+      {
+        "id": 49,
+        "total_price": 64950,
+        "date": 44990
+      }
+    ]
+  }
