@@ -26,7 +26,7 @@ const Footer = () => {
                     </div>
                 </section>
 
-                <section class="">
+                <section className="">
                     <div className="container text-center text-md-start mt-5">
                         <div className="row mt-3">
                             <div className="col-md-3 col-lg-4 col-xl-3 mx-auto mb-4">

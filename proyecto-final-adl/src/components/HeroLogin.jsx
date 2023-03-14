@@ -1,4 +1,49 @@
+import React from "react";
+import axios from "axios";
+import { AuthContex } from "../context/AuthContextProvider";
+import { useNavigate } from "react-router-dom";
+import swal from "sweetalert";
+
 const HeroLogin = () => {
+    const [userName, setUserName] = React.useState("");
+    const [password, setPassword] = React.useState("");
+    const { setIsAuth } = React.useContext(AuthContex);
+
+    const navigate = useNavigate();
+
+    const login = async () => {
+        try {
+            const accessuser = await axios.post("http://localhost:3001/login", {
+                email: userName,
+                password: password,
+            });
+
+            swal({
+                title: "Success",
+                text: "You are logged in",
+                icon: "success",
+                button: "Ok",
+            })
+            setTimeout(() => {
+                swal.close();
+            }, 2000);
+
+            localStorage.setItem("tk", accessuser.data.token)
+            setIsAuth(true);
+            navigate("/dashboard");
+        } catch (error) {
+            console.log(error);
+            swal({
+                title: "Error",
+                text: "Invalid credentials",
+                icon: "error",
+                button: "Ok",
+            });
+
+
+        }
+    };
+
     return (
         <div id="hero-login" className="container col-xl-10 col-xxl-8">
             <div className="row align-items-center g-lg-5 py-5">
@@ -21,8 +66,9 @@ const HeroLogin = () => {
                                 className="form-control"
                                 id="floatingInput"
                                 placeholder="name@example.com"
+                                onChange={(e) => setUserName(e.target.value)}
                             />
-                            <label for="floatingInput">Email address</label>
+                            <label htmlFor="floatingInput">Email address</label>
                         </div>
                         <div className="form-floating mb-3">
                             <input
@@ -30,8 +76,9 @@ const HeroLogin = () => {
                                 className="form-control"
                                 id="floatingPassword"
                                 placeholder="Password"
+                                onChange={(e) => setPassword(e.target.value)}
                             />
-                            <label for="floatingPassword">Password</label>
+                            <label htmlFor="floatingPassword">Password</label>
                         </div>
                         <div className="checkbox mb-3">
                             <label>
@@ -42,6 +89,7 @@ const HeroLogin = () => {
                         <button
                             className="w-100 btn btn-lg btn-primary"
                             type="submit"
+                            onClick={login}
                         >
                             Sign in
                         </button>

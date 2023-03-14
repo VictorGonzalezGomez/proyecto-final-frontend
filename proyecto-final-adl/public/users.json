@@ -1,0 +1,59 @@
+[
+    {
+        "username": [
+            {
+                "frist-name": "",
+                "last-name": ""
+            }
+        ],
+        "email": "admin@gmail.com",
+        "password": "12345",
+        "store": [
+            {
+                "store-name": "",
+                "RUT": "",
+                "industry": "",
+                "address": ""
+            }
+        ],
+        "rol": "admin"
+    },
+    {
+        "username": [
+            {
+                "frist-name": "",
+                "last-name": ""
+            }
+        ],
+        "email": "user1@gmail.com",
+        "password": "12345",
+        "store": [
+            {
+                "store-name": "",
+                "RUT": "",
+                "industry": "",
+                "address": ""
+            }
+        ],
+        "rol": "user"
+    },
+    {
+        "username": [
+            {
+                "frist-name": "",
+                "last-name": ""
+            }
+        ],
+        "email": "user2@gmail.com",
+        "password": "12345",
+        "store": [
+            {
+                "store-name": "",
+                "RUT": "",
+                "industry": "",
+                "address": ""
+            }
+        ],
+        "rol": "user"
+    }
+]
