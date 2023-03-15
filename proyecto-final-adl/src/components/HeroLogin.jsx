@@ -4,10 +4,16 @@ import { AuthContex } from "../context/AuthContextProvider";
 import { useNavigate } from "react-router-dom";
 import swal from "sweetalert";
 
+
+
+
+
 const HeroLogin = () => {
+    
     const [userName, setUserName] = React.useState("");
     const [password, setPassword] = React.useState("");
-    const { setIsAuth } = React.useContext(AuthContex);
+
+    const { setIsAuth, setAuthUser } = React.useContext(AuthContex);
 
     const navigate = useNavigate();
 
@@ -17,6 +23,7 @@ const HeroLogin = () => {
                 email: userName,
                 password: password,
             });
+            console.log(accessuser);
 
             swal({
                 title: "Success",
@@ -30,7 +37,12 @@ const HeroLogin = () => {
 
             localStorage.setItem("tk", accessuser.data.token)
             setIsAuth(true);
-            navigate("/dashboard");
+
+            setAuthUser({
+                email: userName,
+                password: password,
+            })
+            navigate("/about-us");
         } catch (error) {
             console.log(error);
             swal({
@@ -39,8 +51,6 @@ const HeroLogin = () => {
                 icon: "error",
                 button: "Ok",
             });
-
-
         }
     };
 
@@ -88,7 +98,6 @@ const HeroLogin = () => {
                         </div>
                         <button
                             className="w-100 btn btn-lg btn-primary"
-                            type="submit"
                             onClick={login}
                         >
                             Sign in
@@ -98,6 +107,8 @@ const HeroLogin = () => {
                             By clicking Sign up, you agree to the terms of use.
                         </small>
                     </form>
+
+                    
                 </div>
             </div>
         </div>

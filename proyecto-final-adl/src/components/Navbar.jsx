@@ -1,3 +1,4 @@
+import { NavLink } from "react-router-dom";
 const Navbar = () => {
     return (
         <>
@@ -20,34 +21,42 @@ const Navbar = () => {
                     <div className="collapse navbar-collapse" id="navbarNav">
                         <ul className="navbar-nav">
                             <li className="nav-item">
-                                <a
+                                {/* <a
                                     className="nav-link active"
                                     aria-current="page"
                                     href="/"
                                 >
                                     Home
-                                </a>
+                                </a> */}
+
+                                <NavLink className="nav-link" to="/" end>
+                                    Home
+                                </NavLink>
                             </li>
                             <li className="nav-item">
-                                <a className="nav-link" href="#features-1">
-                                    About us
-                                </a>
+                                <NavLink className="nav-link" to="/about-us">
+                                    About Us
+                                </NavLink>
                             </li>
                             <li className="nav-item">
-                                <a className="nav-link" href="#system-features">
+                                <NavLink className="nav-link" to="/features">
                                     Features
-                                </a>
+                                </NavLink>
                             </li>
                             <li className="nav-item">
                                 <a className="nav-link" href="#pricing">
                                     Pricing
                                 </a>
                             </li>
-                            
+
                             <li className="nav-item">
-                                <a className="nav-link" href="#faq">
+                                <NavLink
+                                    className="nav-link"
+                                    id="navbar-total"
+                                    to="/faq"
+                                >
                                     FAQ
-                                </a>
+                                </NavLink>
                             </li>
                         </ul>
                     </div>
