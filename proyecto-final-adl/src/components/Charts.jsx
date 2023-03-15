@@ -27,13 +27,18 @@ export default function Charts() {
     );
 
     return (
-        <div className="d-flex flex-wrap gap-3 justify-content-center p-5 m-0">
+        <div className="d-flex gap-3 justify-content-center p-5 m-0 min-vh-100">
 
           {charts[0]?.data?.labels?.length !== 0 ? charts.map((chart) => (
-            <div className="card shadow-sm" key={chart.id} style={{ width: "20rem" }}>
+            <div className="card shadow-sm" key={chart.id} style={{ width: "32rem" }}>
+              <div className="card-header">
                 <Line data={chart.data}/>
+              </div>
               <div className="card-body">
-                <p className="card-text">{chart.title}</p>
+                <p className="card-text">
+                  {chart.title}
+                </p>
+                
                 <div className="d-flex justify-content-between align-items-center">
                   <div className="btn-group">
                     <button type="button" className="btn btn-sm btn-outline-success">View</button>
