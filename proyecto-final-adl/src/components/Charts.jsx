@@ -27,13 +27,15 @@ export default function Charts() {
     );
 
     return (
-        <div className="d-flex gap-3 justify-content-center p-5 m-0 min-vh-100">
-
+        // <div className="d-flex gap-3 justify-content-center p-5 m-0 ">
+        <div class="col py-5 px-5 align-items-center text-center">
+        <div class="row justify-content-md-center">
           {charts[0]?.data?.labels?.length !== 0 ? charts.map((chart) => (
-            <div className="card shadow-sm" key={chart.id} style={{ width: "32rem" }}>
-              <div className="card-header">
+              <div class="col align-items-center">
+            <div className="card shadow-sm  align-items-center" key={chart.id} >
+             
                 <Line data={chart.data}/>
-              </div>
+              
               <div className="card-body">
                 <p className="card-text">
                   {chart.title}
@@ -48,9 +50,11 @@ export default function Charts() {
                 </div>
               </div>
             </div>
+             </div>
           )) 
           : <h1>Loading...</h1>}
 
+        </div>
         </div>
     )
 }
