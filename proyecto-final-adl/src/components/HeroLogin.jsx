@@ -93,10 +93,8 @@ const HeroLogin = () => {
                         >
                             Sign in
                         </button>
-                        <hr className="my-4" />
-                        <small className="text-muted">
-                            By clicking Sign up, you agree to the terms of use.
-                        </small>
+                        <hr className="my-4"/>
+                        <a class=" w-100 btn btn btn-lg btn-outline-success" href="/register" role="button">Register</a>
                     </form>
                 </div>
             </div>
