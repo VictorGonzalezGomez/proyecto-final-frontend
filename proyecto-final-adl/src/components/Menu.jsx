@@ -21,24 +21,6 @@ export default function Menu() {
           Dashboard
         </a>
       </li>
-      <li>
-        <a href="/" className="nav-link text-white">
-          <svg className="bi pe-none me-2" width="16" height="16"></svg>
-          Orders
-        </a>
-      </li>
-      <li>
-        <a href="/" className="nav-link text-white">
-          <svg className="bi pe-none me-2" width="16" height="16"></svg>
-          Products
-        </a>
-      </li>
-      <li>
-        <a href="/" className="nav-link text-white">
-          <svg className="bi pe-none me-2" width="16" height="16"></svg>
-          Customers
-        </a>
-      </li>
     </ul>
     <hr/>
     <div className="dropdown">
