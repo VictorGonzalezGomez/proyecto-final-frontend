@@ -15,8 +15,6 @@ import { Routes, Route } from "react-router-dom";
 import RegisterPage from "./views/RegisterPage";
 
 
-
-
 function App() {
     return (
         <AuthContexProvider>

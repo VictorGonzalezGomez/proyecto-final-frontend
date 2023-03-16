@@ -4,12 +4,7 @@ import { AuthContex } from "../context/AuthContextProvider";
 import { useNavigate } from "react-router-dom";
 import swal from "sweetalert";
 
-
-
-
-
 const HeroLogin = () => {
-    
     const [userName, setUserName] = React.useState("");
     const [password, setPassword] = React.useState("");
 
@@ -19,10 +14,13 @@ const HeroLogin = () => {
 
     const login = async () => {
         try {
-            const accessuser = await axios.post("http://localhost:3001/login", {
-                email: userName,
-                password: password,
-            });
+            const accessuser = await axios.post(
+                "https://backend-test-production-090d.up.railway.app/login",
+                {
+                    email: userName,
+                    password: password,
+                }
+            );
             console.log(accessuser);
 
             swal({
@@ -30,18 +28,18 @@ const HeroLogin = () => {
                 text: "You are logged in",
                 icon: "success",
                 button: "Ok",
-            })
+            });
             setTimeout(() => {
                 swal.close();
             }, 2000);
 
-            localStorage.setItem("tk", accessuser.data.token)
+            localStorage.setItem("tk", accessuser.data.token);
             setIsAuth(true);
 
             setAuthUser({
                 email: userName,
                 password: password,
-            })
+            });
             navigate("/gallery");
         } catch (error) {
             console.log(error);
@@ -51,6 +49,37 @@ const HeroLogin = () => {
                 icon: "error",
                 button: "Ok",
             });
+        }
+    };
+
+    // mail validator function
+    const validateEmail = (email) => {
+        var re = /\S+@\S+\.\S+/;
+        return re.test(email);
+    };
+
+    const handleLogin = () => {
+        // check email validation
+        if (!validateEmail(userName)) {
+            swal({
+                title: "Error",
+                text: "Please enter a valid email",
+                icon: "error",
+                button: "Ok",
+            });
+
+            return;
+        }
+        // all fields are required
+        if (userName === "" || password === "") {
+            swal({
+                title: "Error",
+                text: "Please fill all the fields",
+                icon: "error",
+                button: "Ok",
+            });
+        } else {
+            login();
         }
     };
 
@@ -69,44 +98,46 @@ const HeroLogin = () => {
                     </p>
                 </div>
                 <div className="col-md-10 mx-auto col-lg-5">
-                    
-                        <div className="form-floating mb-3">
-                            <input
-                                type="email"
-                                className="form-control"
-                                id="floatingInput"
-                                placeholder="name@example.com"
-                                onChange={(e) => setUserName(e.target.value)}
-                            />
-                            <label htmlFor="floatingInput">Email address</label>
-                        </div>
-                        <div className="form-floating mb-3">
-                            <input
-                                type="password"
-                                className="form-control"
-                                id="floatingPassword"
-                                placeholder="Password"
-                                onChange={(e) => setPassword(e.target.value)}
-                            />
-                            <label htmlFor="floatingPassword">Password</label>
-                        </div>
-                        <div className="checkbox mb-3">
-                            <label>
-                                <input type="checkbox" value="remember-me" />{" "}
-                                Remember me
-                            </label>
-                        </div>
-                        <button
-                            className="w-100 btn btn-lg btn-primary"
-                            onClick={login}
-                        >
-                            Sign in
-                        </button>
-                        <hr className="my-4"/>
-                        <a class=" w-100 btn btn btn-lg btn-outline-success" href="/register" role="button">Register</a>
-                    
-
-                    
+                    <div className="form-floating mb-3">
+                        <input
+                            type="email"
+                            className="form-control"
+                            id="floatingInput"
+                            placeholder="name@example.com"
+                            onChange={(e) => setUserName(e.target.value)}
+                        />
+                        <label htmlFor="floatingInput">Email address</label>
+                    </div>
+                    <div className="form-floating mb-3">
+                        <input
+                            type="password"
+                            className="form-control"
+                            id="floatingPassword"
+                            placeholder="Password"
+                            onChange={(e) => setPassword(e.target.value)}
+                        />
+                        <label htmlFor="floatingPassword">Password</label>
+                    </div>
+                    <div className="checkbox mb-3">
+                        <label>
+                            <input type="checkbox" value="remember-me" />{" "}
+                            Remember me
+                        </label>
+                    </div>
+                    <button
+                        className="w-100 btn btn-lg btn-primary"
+                        onClick={handleLogin}
+                    >
+                        Sign in
+                    </button>
+                    <hr className="my-4" />
+                    <a
+                        class=" w-100 btn btn btn-lg btn-outline-success"
+                        href="/register"
+                        role="button"
+                    >
+                        Register
+                    </a>
                 </div>
             </div>
         </div>
