@@ -6,7 +6,7 @@ const AboutUs = () => {
     
     return (
         <div>
-        <h1>{authUser.email}</h1>
+        <h1>Hi</h1>
         <p>
             Lorem ipsum dolor sit ame
         </p>

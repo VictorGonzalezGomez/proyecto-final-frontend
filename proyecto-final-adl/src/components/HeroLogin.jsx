@@ -42,7 +42,7 @@ const HeroLogin = () => {
                 email: userName,
                 password: password,
             })
-            navigate("/about-us");
+            navigate("/gallery");
         } catch (error) {
             console.log(error);
             swal({
@@ -69,7 +69,7 @@ const HeroLogin = () => {
                     </p>
                 </div>
                 <div className="col-md-10 mx-auto col-lg-5">
-                    <form className="p-4 p-md-5 border rounded-3 bg-light">
+                    
                         <div className="form-floating mb-3">
                             <input
                                 type="email"
@@ -102,11 +102,9 @@ const HeroLogin = () => {
                         >
                             Sign in
                         </button>
-                        <hr className="my-4" />
-                        <small className="text-muted">
-                            By clicking Sign up, you agree to the terms of use.
-                        </small>
-                    </form>
+                        <hr className="my-4"/>
+                        <a class=" w-100 btn btn btn-lg btn-outline-success" href="/register" role="button">Register</a>
+                    
 
                     
                 </div>

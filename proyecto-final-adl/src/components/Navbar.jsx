@@ -61,12 +61,7 @@ const Navbar = () => {
                         </ul>
                     </div>
                     <div className="d-flex">
-                        <button
-                            className="btn btn-outline-success"
-                            type="submit"
-                        >
-                            Register
-                        </button>
+                
                     </div>
                 </div>
             </nav>
