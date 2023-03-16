@@ -4,10 +4,16 @@ import { AuthContex } from "../context/AuthContextProvider";
 import { useNavigate } from "react-router-dom";
 import swal from "sweetalert";
 
+
+
+
+
 const HeroLogin = () => {
+    
     const [userName, setUserName] = React.useState("");
     const [password, setPassword] = React.useState("");
-    const { setIsAuth } = React.useContext(AuthContex);
+
+    const { setIsAuth, setAuthUser } = React.useContext(AuthContex);
 
     const navigate = useNavigate();
 
@@ -17,6 +23,7 @@ const HeroLogin = () => {
                 email: userName,
                 password: password,
             });
+            console.log(accessuser);
 
             swal({
                 title: "Success",
@@ -30,7 +37,12 @@ const HeroLogin = () => {
 
             localStorage.setItem("tk", accessuser.data.token)
             setIsAuth(true);
-            navigate("/dashboard");
+
+            setAuthUser({
+                email: userName,
+                password: password,
+            })
+            navigate("/gallery");
         } catch (error) {
             console.log(error);
             swal({
@@ -39,8 +51,6 @@ const HeroLogin = () => {
                 icon: "error",
                 button: "Ok",
             });
-
-
         }
     };
 
@@ -59,7 +69,7 @@ const HeroLogin = () => {
                     </p>
                 </div>
                 <div className="col-md-10 mx-auto col-lg-5">
-                    <form className="p-4 p-md-5 border rounded-3 bg-light">
+                <form className="p-4 p-md-5 border rounded-3 bg-light">
                         <div className="form-floating mb-3">
                             <input
                                 type="email"
@@ -88,14 +98,15 @@ const HeroLogin = () => {
                         </div>
                         <button
                             className="w-100 btn btn-lg btn-primary"
-                            type="submit"
                             onClick={login}
                         >
                             Sign in
                         </button>
                         <hr className="my-4"/>
                         <a class=" w-100 btn btn btn-lg btn-outline-success" href="/register" role="button">Register</a>
-                    </form>
+                        </form>
+
+                    
                 </div>
             </div>
         </div>

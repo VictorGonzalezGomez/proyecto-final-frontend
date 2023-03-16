@@ -2,26 +2,37 @@ import "./App.css";
 import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
 import HomePage from "./views/HomePage";
+import Faq from "./views/FAQ";
+import AboutUs from "./views/AboutUs";
+import Features from "./views/Features";
+import Gallery from "./views/Gallery";
 
-import ChartProvider from "./context/ChartContext";
+
 import AuthContexProvider from "./context/AuthContextProvider";
+import ChartProvider from "./context/ChartContext";
 
 import { Routes, Route } from "react-router-dom";
 import RegisterPage from "./views/RegisterPage";
-import Profilepage from "./views/ProfilePage"
-import Gallery from "./views/Gallery";
+
+
+
 
 function App() {
     return (
         <AuthContexProvider>
             <ChartProvider>
+            
+
             <Routes>
+                <Route path="/faq" element={<Faq/>} />
+                <Route path="/about-us" element={<AboutUs/>} />
+                <Route path="/features" element={<Features/>} />
                 <Route path="/" element={<HomePage/>} />
                 <Route path="/register" element={<RegisterPage/>} />
-                <Route path="/profile" element={<Profilepage/>} />
-                <Route path="/gallery" element={<Gallery/>} />             
+                <Route path="/gallery" element={<Gallery/>} />
             </Routes>
-           </ChartProvider>
+
+            </ChartProvider>
         </AuthContexProvider>
     );
 }
