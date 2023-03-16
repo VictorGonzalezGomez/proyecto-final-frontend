@@ -3,6 +3,7 @@ import React from "react";
 export const AuthContex = React.createContext();
 
 const AuthContexProvider = ({ children }) => {
+    
 
     const [isAuth, setIsAuth] = React.useState(false);
     const [authUser, setAuthUser] = React.useState({});
@@ -11,6 +12,8 @@ const AuthContexProvider = ({ children }) => {
         const token = localStorage.getItem("tk");
         if (token) {
             setIsAuth(true);
+            // hacer persistir el auth
+            
         }
     }, []);
 
