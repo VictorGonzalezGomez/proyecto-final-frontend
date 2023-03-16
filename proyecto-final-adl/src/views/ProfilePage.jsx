@@ -1,16 +1,16 @@
 import React from "react";
-import Charts from "../components/Charts";
 import Menu from "../components/Menu"
 import Navbar from "../components/Navbar";
+import Profile from "../components/Profie";
 export default function Gallery () {
     return(
-        <>  
+
+        <>
         <Navbar/>
         <div className="gallery-charts d-flex">
             <Menu/>
-            <Charts/>
+            <Profile/>
         </div>
         </>
-      
     )
 }

@@ -31,7 +31,7 @@ export default function Charts() {
         <div class="col py-5 px-5 align-items-center text-center">
         <div class="row justify-content-md-center">
           {charts[0]?.data?.labels?.length !== 0 ? charts.map((chart) => (
-              <div class="col align-items-center">
+            <div class="col align-items-center">
             <div className="card shadow-sm  align-items-center" key={chart.id} >
              
                 <Line data={chart.data}/>
