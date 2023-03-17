@@ -151,7 +151,7 @@ const HeroLogin = () => {
                                 </button>
                                 <hr className="my-4" />
                                 <a
-                                    class=" w-100 btn btn btn-lg btn-outline-success"
+                                    className=" w-100 btn btn btn-lg btn-outline-success"
                                     href="/register"
                                     role="button"
                                 >

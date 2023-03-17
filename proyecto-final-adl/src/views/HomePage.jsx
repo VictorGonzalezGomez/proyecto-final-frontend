@@ -1,6 +1,4 @@
 import analyticsImage from "../assets/img/analytics-people.png";
-import Footer from "../components/Footer";
-import Navbar from "../components/Navbar";
 import HeroLogin from "../components/HeroLogin";
 
 

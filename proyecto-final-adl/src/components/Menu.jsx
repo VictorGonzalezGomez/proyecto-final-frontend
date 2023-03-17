@@ -3,6 +3,7 @@ import { ChartContext } from "../context/ChartContext";
 import { NavLink } from "react-router-dom";
 
 
+
 export default function Menu() {
     const { charts } = React.useContext(ChartContext)
     const setActiveClass = ({ isActive }) => (isActive ? "active" : "unactive");
@@ -27,8 +28,8 @@ export default function Menu() {
           Gallery
         </NavLink>
       </li>
-      <li>
-      <button className="btn btn-toggle d-inline-flex text-white nav-link align-items-center rounded border-0 collapsed" data-bs-toggle="collapse" data-bs-target="#dashboard-collapse" aria-expanded="false">
+      <li className="nav-item">
+        <button className="btn btn-toggle d-inline-flex text-white nav-link align-items-center rounded border-0 collapsed" data-bs-toggle="collapse" data-bs-target="#dashboard-collapse" aria-expanded="false">
           Dashboard
         </button>
         <div className="collapse" id="dashboard-collapse">
