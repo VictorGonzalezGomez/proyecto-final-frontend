@@ -15,6 +15,9 @@ import { Routes, Route } from "react-router-dom";
 import Profile from "./components/Profie";
 import Footer from "./components/Footer";
 import Navbar from "./components/Navbar";
+import './index.css';
+import Dashboard from "./views/Dashboard"
+
 
 function App() {
     return (
@@ -28,6 +31,8 @@ function App() {
                     <Route path="/features" element={<Features />} />
                     <Route path="/" element={<HomePage />} />
                     <Route path="/register" element={<RegisterGeneralPage />} />
+                    <Route path="/gallery" element={<Gallery />} />
+                    <Route path="/dashboard/:chartId" element={<Dashboard />} />
                     <Route
                         path="/registeruser"
                         element={<RegisterUserPage />}

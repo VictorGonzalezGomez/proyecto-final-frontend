@@ -11,9 +11,9 @@ const RegisterUserPage = () => {
 
     return (
         <>
-        <Navbar/>
+        
         <RegisterFormUser/>
-        <Footer/>
+        
         </>
     );
 };
