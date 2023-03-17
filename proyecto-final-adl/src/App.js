@@ -3,7 +3,7 @@ import HomePage from "./views/HomePage";
 import Faq from "./views/FAQ";
 import AboutUs from "./views/AboutUs";
 import Features from "./views/Features";
-import Gallery from "./views/Gallery";
+import Summary from "./views/Summary";
 import RegisterGeneralPage from "./views/RegisterGeneralPage";
 import RegisterUserPage from "./views/RegisterUserPage";
 import RegisterStorePage from "./views/RegisterStorePage";
@@ -29,7 +29,7 @@ function App() {
                     <Route path="/features" element={<Features />} />
                     <Route path="/" element={<HomePage />} />
                     <Route path="/register" element={<RegisterGeneralPage />} />
-                    <Route path="/gallery" element={<Gallery />} />
+                    <Route path="/summary" element={<Summary />} />
                     <Route path="/dashboard/:chartId" element={<Dashboard />} />
                     <Route
                         path="/registeruser"
@@ -39,7 +39,6 @@ function App() {
                         path="/registerstore"
                         element={<RegisterStorePage />}
                     />
-                    <Route path="/gallery" element={<Gallery />} />
                     <Route path="/profile" element={<Profile />} />
                     <Route path="/dashboard/:chartId" element={<Dashboard />} />
                 </Routes>

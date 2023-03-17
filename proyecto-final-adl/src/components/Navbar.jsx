@@ -13,7 +13,7 @@ const Navbar = () => {
     const { isAuth, setIsAuth } = React.useContext(AuthContex);
     return (
         <>
-            <nav className="navbar navbar-expand-lg navbar-light bg-light sticky-top">
+            <nav className="navbar navbar-expand-lg navbar-dark bg-dark sticky-top">
                 <div className="container">
                     <a className="navbar-brand" href="/">
                         <h1>Logo</h1>
@@ -37,17 +37,9 @@ const Navbar = () => {
                                     <li className="nav-item">
                                         <NavLink
                                             className="nav-link"
-                                            to="/dashboard"
+                                            to="/summary"
                                         >
-                                            Dashboard
-                                        </NavLink>
-                                    </li>
-                                    <li className="nav-item">
-                                        <NavLink
-                                            className="nav-link"
-                                            to="/gallery"
-                                        >
-                                            Gallery
+                                            Summary
                                         </NavLink>
                                     </li>
 

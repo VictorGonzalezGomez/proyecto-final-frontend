@@ -40,7 +40,7 @@ const HeroLogin = () => {
                 email: userName,
                 password: password,
             });
-            navigate("/gallery");
+            navigate("/summary");
         } catch (error) {
             console.log(error);
             swal({

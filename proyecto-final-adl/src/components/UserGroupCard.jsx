@@ -7,7 +7,7 @@ export default function UserGroupCard() {
     <div className="container col-lg-3 col-md-3 px-2 py-5">
         <div className="card shadow-sm align-items-center">
         <h3>Company Name</h3>
-        <div className="card-body">
+        <div className="card-body table-responsive">
             <table className="table table-striped table-hover dark">
             <thead>
                 <tr>
