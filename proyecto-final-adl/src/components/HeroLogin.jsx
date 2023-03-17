@@ -40,7 +40,7 @@ const HeroLogin = () => {
                 email: userName,
                 password: password,
             });
-            navigate("/gallery");
+            navigate("/summary");
         } catch (error) {
             console.log(error);
             swal({
@@ -54,7 +54,7 @@ const HeroLogin = () => {
 
     // mail validator function
     const validateEmail = (email) => {
-        var re = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
+        var re = /^\w+([-]?\w+)*@\w+([-]?\w+)*(\.\w{2,3})+$/;
         return re.test(email);
     };
 

@@ -8,11 +8,11 @@ export default function Menu() {
     const { charts } = React.useContext(ChartContext)
     const setActiveClass = ({ isActive }) => (isActive ? "active" : "unactive");
     return (
-    <div className="col-lg-2 col-md-3 d-flex flex-column flex-shrink-0 p-3 text-bg-dark sidebar-sticky position-sticky min-vh-100">
+    <div className="col-lg-2 col-md-3 d-flex flex-column p-3 text-bg-dark">
           <div className="dropdown">
       <a href="/profile" className="d-flex align-items-center text-white text-decoration-none dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
         <img src="https://github.com/mdo.png" alt="" width="32" height="32" className="rounded-circle me-2" />
-        <strong>mdo</strong>
+        <strong>John Ipson</strong>
       </a>
       <ul className="dropdown-menu dropdown-menu-dark text-small shadow">
         <li><a className="dropdown-item" href="/profile">Profile</a></li>
@@ -24,8 +24,8 @@ export default function Menu() {
   
     <ul className="nav nav-pills flex-column mb-auto">
       <li className="nav-item">
-        <NavLink to="/gallery" className={`nav-link text-white ${setActiveClass}`}>
-          Gallery
+        <NavLink to="/summary" className={`nav-link text-white ${setActiveClass}`}>
+          Summary
         </NavLink>
       </li>
       <li className="nav-item">

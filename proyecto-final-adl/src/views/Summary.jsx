@@ -1,12 +1,12 @@
 import React from "react";
-import Charts from "../components/Charts";
+import CardCharts from "../components/CardCharts";
 import Menu from "../components/Menu"
 import UserGroupCard from "../components/UserGroupCard";
-export default function Gallery () {
+export default function Summary () {
     return(
-        <div className="gallery-charts d-flex">
+        <div className="gallery-charts d-flex flex-wrap">
             <Menu/>
-            <Charts/>
+            <CardCharts/>
             <UserGroupCard/>
         </div>
     );

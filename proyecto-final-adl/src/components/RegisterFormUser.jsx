@@ -27,7 +27,7 @@ const RegisterForm = (props) => {
           setErrMsg("The password or the email are not valid");
           return;
         }
-        if (password != auxPassword){
+        if (password !== auxPassword){
             setErrMsg("the passwords are not the same");
             return;
         }
