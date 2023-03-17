@@ -1,4 +1,16 @@
+import { NavLink } from "react-router-dom";
+import { AuthContex } from "../context/AuthContextProvider";
+import { useNavigate } from "react-router-dom";
+import React from "react";
 const Navbar = () => {
+    const navigate = useNavigate();
+    const logout = () => {
+        localStorage.removeItem("tk");
+        setIsAuth(false);
+        navigate("/");
+      };
+
+    const { isAuth, setIsAuth } = React.useContext(AuthContex);
     return (
         <>
             <nav className="navbar navbar-expand-lg navbar-light bg-light sticky-top">
@@ -19,41 +31,89 @@ const Navbar = () => {
                     </button>
                     <div className="collapse navbar-collapse" id="navbarNav">
                         <ul className="navbar-nav">
-                            <li className="nav-item">
-                                <a
-                                    className="nav-link active"
-                                    aria-current="page"
-                                    href="/"
-                                >
-                                    Home
-                                </a>
-                            </li>
-                            <li className="nav-item">
-                                <a className="nav-link" href="#features-1">
-                                    About us
-                                </a>
-                            </li>
-                            <li className="nav-item">
-                                <a className="nav-link" href="#system-features">
-                                    Features
-                                </a>
-                            </li>
-                            <li className="nav-item">
-                                <a className="nav-link" href="#pricing">
-                                    Pricing
-                                </a>
-                            </li>
-                            
-                            <li className="nav-item">
-                                <a className="nav-link" href="#faq">
-                                    FAQ
-                                </a>
-                            </li>
+                            {/* Private navbar links */}
+                            {isAuth && (
+                                <>
+                                    <li className="nav-item">
+                                        <NavLink
+                                            className="nav-link"
+                                            to="/dashboard"
+                                        >
+                                            Dashboard
+                                        </NavLink>
+                                    </li>
+                                    <li className="nav-item">
+                                        <NavLink
+                                            className="nav-link"
+                                            to="/gallery"
+                                        >
+                                            Gallery
+                                        </NavLink>
+                                    </li>
+
+
+                           {/* log out button */}
+                           <li  className="nav-item">
+                                        <a onClick={logout} className="nav-link" href="/">
+                                            Log Out
+                                        </a>
+                                    </li>
+                                </>
+                            )}
+
+                            {/* End private navbar links */}
+
+                            {/* Public navbar links */}
+
+                            {!isAuth && (
+                                <>
+                                    <li className="nav-item">
+                                        <NavLink
+                                            className="nav-link"
+                                            to="/"
+                                            end
+                                        >
+                                            Home
+                                        </NavLink>
+                                    </li>
+                                    <li className="nav-item">
+                                        <NavLink
+                                            className="nav-link"
+                                            to="/about-us"
+                                        >
+                                            About Us
+                                        </NavLink>
+                                    </li>
+                                    <li className="nav-item">
+                                        <NavLink
+                                            className="nav-link"
+                                            to="/features"
+                                        >
+                                            Features
+                                        </NavLink>
+                                    </li>
+                                    <li className="nav-item">
+                                        <a className="nav-link" href="#pricing">
+                                            Pricing
+                                        </a>
+                                    </li>
+
+                                    <li className="nav-item">
+                                        <NavLink
+                                            className="nav-link"
+                                            id="navbar-total"
+                                            to="/faq"
+                                        >
+                                            FAQ
+                                        </NavLink>
+                                    </li>
+                                </>
+                            )}
+
+                            {/* Public navbar links */}
                         </ul>
                     </div>
-                    <div className="d-flex">
-                
-                    </div>
+                    <div className="d-flex"></div>
                 </div>
             </nav>
         </>

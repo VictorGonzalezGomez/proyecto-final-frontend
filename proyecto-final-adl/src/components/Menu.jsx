@@ -9,12 +9,12 @@ export default function Menu() {
     return (
     <div className="col-lg-2 col-md-3 d-flex flex-column flex-shrink-0 p-3 text-bg-dark sidebar-sticky position-sticky min-vh-100">
           <div className="dropdown">
-      <a href="/" className="d-flex align-items-center text-white text-decoration-none dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
+      <a href="/profile" className="d-flex align-items-center text-white text-decoration-none dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
         <img src="https://github.com/mdo.png" alt="" width="32" height="32" className="rounded-circle me-2" />
         <strong>mdo</strong>
       </a>
       <ul className="dropdown-menu dropdown-menu-dark text-small shadow">
-        <li><a className="dropdown-item" href="/">Profile</a></li>
+        <li><a className="dropdown-item" href="/profile">Profile</a></li>
         <li><hr className="dropdown-divider"/></li>
         <li><a className="dropdown-item" href="/">Sign out</a></li>
       </ul>
@@ -27,8 +27,14 @@ export default function Menu() {
           Gallery
         </NavLink>
       </li>
-      <li className="nav-item">
-        <button className="btn btn-toggle d-inline-flex text-white nav-link align-items-center rounded border-0 collapsed" data-bs-toggle="collapse" data-bs-target="#dashboard-collapse" aria-expanded="false">
+      <li>
+        <a href="/gallery" className="nav-link text-white">
+          <svg className="bi pe-none me-2" width="16" height="16"></svg>
+          Gallery
+        </a>
+      </li>
+      <li>
+      <button className="btn btn-toggle d-inline-flex text-white nav-link align-items-center rounded border-0 collapsed" data-bs-toggle="collapse" data-bs-target="#dashboard-collapse" aria-expanded="false">
           Dashboard
         </button>
         <div className="collapse" id="dashboard-collapse">

@@ -1,5 +1,4 @@
 const RegisterForm = () => {
-
     return (
         <div  class="d-flex align-items-center justify-content-center bg-image">
         <div class="card text-center m-5"  style={{maxWidth: '600px'}}>

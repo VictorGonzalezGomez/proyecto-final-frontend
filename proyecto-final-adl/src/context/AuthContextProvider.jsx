@@ -3,12 +3,27 @@ import React from "react";
 export const AuthContex = React.createContext();
 
 const AuthContexProvider = ({ children }) => {
-  const [isAuth, setIsAuth] = React.useState(false);
-  return (
-    <AuthContex.Provider value={{ isAuth, setIsAuth }}>
-      {children}
-    </AuthContex.Provider>
-  );
+    const EMAIL_REGEX = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
+    const PWD_REGEX = /^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[!@#$%]).{8,24}$/;
+    const REGISTER_STORE_URL="";
+
+    const [isAuth, setIsAuth] = React.useState(false);
+    const [authUser, setAuthUser] = React.useState({});
+
+    React.useEffect(() => {
+        const token = localStorage.getItem("tk");
+        if (token) {
+            setIsAuth(true);
+            // hacer persistir el auth
+            
+        }
+    }, []);
+
+    return (
+        <AuthContex.Provider value={{ isAuth, setIsAuth, authUser, setAuthUser}}>
+            {children}
+        </AuthContex.Provider>
+    );
 };
 
 export default AuthContexProvider;
