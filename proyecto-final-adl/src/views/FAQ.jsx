@@ -1,6 +1,10 @@
+import Navbar from "../components/Navbar"
+import Footer from "../components/Footer"
 const Faq = () => {
     // create about us page using bootstrap 
     return (
+        <>
+        <Navbar/>
         <div className="container">
             <div className="row">
                 <div className="col-12">
@@ -14,11 +18,12 @@ const Faq = () => {
                         Praesent commodo cursus magna, vel scelerisque nisl
                         consectetur et. Vivamus sagittis lacus vel augue laoreet
                         rutrum faucibus dolor auctor. Aenean lacinia bibendum
-                    <p/>
                     </>
                 </div>
             </div>
         </div>
+        <Footer/>
+        </>
     );
 
                         

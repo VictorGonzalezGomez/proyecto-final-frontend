@@ -52,13 +52,12 @@ const Navbar = () => {
                                     </li>
 
 
-                                    {/* log out button */}
-                                    <li  className="nav-item">
-                                        <a href="/" onClick={logout} className="nav-link" >
+                           {/* log out button */}
+                           <li  className="nav-item">
+                                        <a onClick={logout} className="nav-link" href="/">
                                             Log Out
                                         </a>
                                     </li>
-
                                 </>
                             )}
 

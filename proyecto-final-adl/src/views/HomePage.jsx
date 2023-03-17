@@ -1,9 +1,13 @@
 import analyticsImage from "../assets/img/analytics-people.png";
+import Footer from "../components/Footer";
+import Navbar from "../components/Navbar";
 import HeroLogin from "../components/HeroLogin";
+
 
 const HomePage = () => {
     return (
         <>
+        
             {/* Login hero section */}
             <HeroLogin />
             {/* end login hero section */}
@@ -293,6 +297,7 @@ const HomePage = () => {
             </div>
 
             {/* end features 3 section */}
+            
         </>
     );
 };
