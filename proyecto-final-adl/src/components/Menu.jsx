@@ -24,7 +24,7 @@ export default function Menu() {
         </a>
       </li>
       <li>
-        <a href="/" className="nav-link text-white">
+        <a href="/dashboard" className="nav-link text-white">
           <svg className="bi pe-none me-2" width="16" height="16"></svg>
           Dashboard
         </a>

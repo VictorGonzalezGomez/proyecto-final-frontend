@@ -8,7 +8,7 @@ export default function Dashboard () {
             <Menu />
             <div>
                 {/* Chart */}
-                <TableData/>
+                <TableData chartId={1}/>
             </div>
         </div>
     )

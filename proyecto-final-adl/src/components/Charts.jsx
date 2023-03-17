@@ -14,7 +14,6 @@ import {
 
 export default function Charts() {
     const { charts } = React.useContext(ChartContext)
-    console.log(charts)
 
     ChartJS.register(
       CategoryScale,
@@ -28,11 +27,11 @@ export default function Charts() {
 
     return (
         // <div className="d-flex gap-3 justify-content-center p-5 m-0 ">
-        <div class="col py-5 px-5 align-items-center text-center">
-        <div class="row justify-content-md-center">
+        <div className="col py-5 px-5 align-items-center text-center">
+        <div className="row justify-content-md-center">
           {charts[0]?.data?.labels?.length !== 0 ? charts.map((chart) => (
-              <div class="col align-items-center">
-            <div className="card shadow-sm  align-items-center" key={chart.id} >
+              <div className="col align-items-center" key={chart.id}>
+            <div className="card shadow-sm align-items-center">
              
                 <Line data={chart.data}/>
               

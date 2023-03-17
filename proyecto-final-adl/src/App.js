@@ -11,7 +11,7 @@ function App() {
     <ChartProvider>
       <Routes>
         <Route path="/" element={<Gallery />} />
-        <Route path="/" element={<Dashboard />} />
+        <Route path="/dashboard" element={<Dashboard />} />
       </Routes>
     </ChartProvider>
     </>

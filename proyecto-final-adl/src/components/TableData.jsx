@@ -5,11 +5,12 @@ import { ChartContext } from '../context/ChartContext';
 const TableData = (chartId) => {
     const { sales } = React.useContext(ChartContext);
     // logica para los datos de la tabla segun parametro, esto es netamente para mostrar unos datos en la tabla segun params
-    const salesByDate = {};
-    const salesByProduct = {};
-
+    // para que espere a que se carguen los datos
     if (sales.length === 0) return;
-
+    let tableData = [];
+    let dataKeys = [];
+    if (chartId = 1) {
+    const salesByDate = {};
     sales?.forEach((sale) => {
         const date = new Date((sale.date - (25567 + 2)) * 86400 * 1000).toISOString().slice(0, 10);
         if (!salesByDate[date]) {
@@ -21,10 +22,10 @@ const TableData = (chartId) => {
         salesByDate[date].totalSales += sale.sales_total;
     });
 
-    const salesByDateData = Object.values(salesByDate);
-    const keysByDate = Object.keys(salesByDateData[0]);
-    console.log(keysByDate)
-    console.log(salesByDateData)
+    tableData = Object.values(salesByDate);
+    dataKeys = Object.keys(tableData[0]);
+    } else if (chartId = 2) {
+    const salesByProduct = {};
     sales?.forEach((sale) => {
             const { product_id, product_name, sales_total } = sale;
             if (!salesByProduct[product_id]) {
@@ -38,32 +39,33 @@ const TableData = (chartId) => {
 
         });
 
-    const salesByProductData = Object.values(salesByProduct);
-    const keysByProduct = Object.keys(salesByProductData[0]);
-    console.log(salesByProductData)
-    console.log(keysByProduct)
-
-
+    tableData = Object.values(salesByProduct);
+    dataKeys = Object.keys(tableData[0]);
+    }
+    console.log(tableData)
+    console.log(dataKeys)
     return (
         <table className="table table-striped table-hover">
             <thead>
                 <tr>
-                    {/* {keys?.map((key) => (
+                    {dataKeys.length > 0 ? dataKeys.map((key) => (
                         <th key={key}>{key}</th>
-                            ))} */}
+                            ))
+                            : <h1>Loading...</h1>
+                        }
                 </tr>
             </thead>
             <tbody>
-                {/* {info.data.datasets.data?.map((row, index) => (
+                {tableData?.map((row, index) => (
                     <tr key={index}>
-                        {keys?.map((key) => (
+                        {dataKeys?.map((key) => (
                             <td key={key}>{row[key]}</td>
                         ))}
                     </tr>
-                ))} */}
+                ))}
             </tbody>
         </table>
-    )  
+    ) 
 }
 
 export default TableData;
