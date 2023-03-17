@@ -11,7 +11,7 @@ import AuthContexProvider from "./context/AuthContextProvider";
 import ChartProvider from "./context/ChartContext";
 import { Routes, Route } from "react-router-dom";
 import './index.css';
-import Profile from "./components/Profie";
+import Profile from "./components/Profile";
 import Footer from "./components/Footer";
 import Navbar from "./components/Navbar";
 import Dashboard from "./views/Dashboard"
