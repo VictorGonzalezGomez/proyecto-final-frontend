@@ -3,7 +3,6 @@ const Faq = () => {
     // create about us page using bootstrap 
     return (
         <>
-        
         <div className="container">
             <div className="row">
                 <div className="col-12">
@@ -21,7 +20,6 @@ const Faq = () => {
                 </div>
             </div>
         </div>
-        
         </>
     );           
 

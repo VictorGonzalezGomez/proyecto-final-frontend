@@ -7,15 +7,13 @@ import Gallery from "./views/Gallery";
 import RegisterGeneralPage from "./views/RegisterGeneralPage";
 import RegisterUserPage from "./views/RegisterUserPage";
 import RegisterStorePage from "./views/RegisterStorePage";
-
 import AuthContexProvider from "./context/AuthContextProvider";
 import ChartProvider from "./context/ChartContext";
-
 import { Routes, Route } from "react-router-dom";
+import './index.css';
 import Profile from "./components/Profie";
 import Footer from "./components/Footer";
 import Navbar from "./components/Navbar";
-import './index.css';
 import Dashboard from "./views/Dashboard"
 import PrivateRoutes from "./helpers/PrivateRoutes";
 
