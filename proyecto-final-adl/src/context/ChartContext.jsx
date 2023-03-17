@@ -5,7 +5,6 @@ export const ChartContext = React.createContext({})
 
 const ChartProvider = (props) => {
     const [sales, setSales] = React.useState([]);
-    // const [chartData, setChartData] = React.useState([]);
     const [charts, setCharts] = React.useState([]);
     React.useEffect(() => {
         const getAllData = async () => {
@@ -33,7 +32,7 @@ const ChartProvider = (props) => {
         });
         ;
         const dataChart = Object.values(salesByDate);
-        // setChartData(dataChart);
+            
         return {
             labels: dataChart.map((sale) => sale.date),
             datasets: [
@@ -61,6 +60,7 @@ const ChartProvider = (props) => {
             salesByProduct[product_id].totalSales += sales_total;
         });
         const dataChart = Object.values(salesByProduct);
+
         return {
             labels: dataChart.map((sale) => sale.product_name),
             datasets: [
@@ -75,6 +75,7 @@ const ChartProvider = (props) => {
         };
     }
     React.useEffect(() => {
+        if(sales.length === 0) return;
         const totalSalesData = formatChartData(sales);
         const totalSalesByProductData = formatChartDataByProduct(sales);
         setCharts([
