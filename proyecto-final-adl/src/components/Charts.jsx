@@ -11,6 +11,7 @@ import {
   Tooltip,
   Legend,
 } from 'chart.js';
+import { useNavigate } from "react-router-dom";
 
 export default function Charts() {
     const { charts } = React.useContext(ChartContext)
@@ -24,7 +25,7 @@ export default function Charts() {
       Tooltip,
       Legend
     );
-
+    const navigate = useNavigate();
     return (
         // <div className="d-flex gap-3 justify-content-center p-5 m-0 ">
         <div className="col py-5 px-5 align-items-center text-center">
@@ -42,7 +43,9 @@ export default function Charts() {
                 
                 <div className="d-flex justify-content-between align-items-center">
                   <div className="btn-group">
-                    <button type="button" className="btn btn-sm btn-outline-success">View</button>
+                    <button type="button" className="btn btn-sm btn-outline-success" onClick={() => {
+                      navigate(`/dashboard/${chart.id}`)
+                    }}>View</button>
                     <button type="button" className="btn btn-sm btn-outline-primary">Edit</button>
                     <button type="button" className="btn btn-sm btn-outline-danger">Delete</button>
                   </div>
