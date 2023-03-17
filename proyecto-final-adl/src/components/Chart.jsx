@@ -1,32 +1,30 @@
 import React from 'react';
-import { Line } from 'react-chartjs-2';
+import { Bar } from 'react-chartjs-2';
 import {
-    Chart as ChartJS,
-    CategoryScale,
-    LinearScale,
-    PointElement,
-    LineElement,
-    Title,
-    Tooltip,
-    Legend,
-  } from 'chart.js';
+  Chart as ChartJS,
+  CategoryScale,
+  LinearScale,
+  BarElement,
+  Title,
+  Tooltip,
+  Legend,
+} from 'chart.js';
 
 const Chart = (chart) => {
 
     ChartJS.register(
         CategoryScale,
         LinearScale,
-        PointElement,
-        LineElement,
+        BarElement,
         Title,
         Tooltip,
         Legend
-        );
+      );
         
     return (
         <div className="col py-5 px-5 align-items-center text-center">
         <div className="row justify-content-md-center">
-            <Line data={chart.chart.data}/>
+            <Bar data={chart.chart.data}/>
         </div>
         </div>
     )

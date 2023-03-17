@@ -1,12 +1,11 @@
 import React from "react";
 import { ChartContext } from "../context/ChartContext";
-import { Line } from 'react-chartjs-2';
+import { Bar } from 'react-chartjs-2';
 import {
   Chart as ChartJS,
   CategoryScale,
   LinearScale,
-  PointElement,
-  LineElement,
+  BarElement,
   Title,
   Tooltip,
   Legend,
@@ -19,8 +18,7 @@ export default function Charts() {
     ChartJS.register(
       CategoryScale,
       LinearScale,
-      PointElement,
-      LineElement,
+      BarElement,
       Title,
       Tooltip,
       Legend
@@ -34,7 +32,8 @@ export default function Charts() {
               <div className="col align-items-center" key={chart.id}>
             <div className="card shadow-sm align-items-center">
              
-                <Line data={chart.data}/>
+                {/* <Line data={chart.data}/> */}
+                <Bar data={chart.data}/>
               
               <div className="card-body">
                 <p className="card-text">

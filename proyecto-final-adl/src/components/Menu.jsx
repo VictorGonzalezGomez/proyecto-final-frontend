@@ -1,9 +1,11 @@
 import React from "react";
 import { ChartContext } from "../context/ChartContext";
+import { NavLink } from "react-router-dom";
 
 
 export default function Menu() {
     const { charts } = React.useContext(ChartContext)
+    const setActiveClass = ({ isActive }) => (isActive ? "active" : "unactive");
     return (
     <div className="col-lg-2 col-md-3 d-flex flex-column flex-shrink-0 p-3 text-bg-dark sidebar-sticky position-sticky min-vh-100">
           <div className="dropdown">
@@ -21,9 +23,9 @@ export default function Menu() {
   
     <ul className="nav nav-pills flex-column mb-auto">
       <li className="nav-item">
-        <a href="/gallery" className="nav-link active" aria-current="page">
+        <NavLink to="/gallery" className={`nav-link text-white ${setActiveClass}`}>
           Gallery
-        </a>
+        </NavLink>
       </li>
       <li className="nav-item">
         <button className="btn btn-toggle d-inline-flex text-white nav-link align-items-center rounded border-0 collapsed" data-bs-toggle="collapse" data-bs-target="#dashboard-collapse" aria-expanded="false">
@@ -32,7 +34,10 @@ export default function Menu() {
         <div className="collapse" id="dashboard-collapse">
         <ul className="btn-toggle-nav list-unstyled fw-normal pb-1 small">
           {charts[0]?.data?.labels?.length !== 0 ? charts.map((chart) => (
-            <li key={chart.id}><a href={`/dashboard/${chart.id}`} className="d-inline-flex text-decoration-none text-white rounded">{chart.title}</a></li>
+            <li key={chart.id}><NavLink to={`/dashboard/${chart.id}`} className= {`nav-link text-white ${setActiveClass}`}>
+              {chart.title}
+              </NavLink>
+              </li>
           ))
           : <li><a href="/" className="d-inline-flex text-decoration-none text-white rounded">No charts yet</a></li>
           }

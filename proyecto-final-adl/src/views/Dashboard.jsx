@@ -32,7 +32,9 @@ export default function Dashboard() {
       }
       salesByDate[date].totalSales += sale.sales_total;
     });
-
+    for (const key in salesByDate) {
+      salesByDate[key].totalSales = salesByDate[key].totalSales.toLocaleString('en-US', {style: 'currency', currency: 'USD', minimumFractionDigits: 0, maximumFractionDigits: 0});
+    }
     tableData = Object.values(salesByDate);
     dataKeys = Object.keys(tableData[0]);
   } else if (idChart === 2) {
@@ -48,7 +50,9 @@ export default function Dashboard() {
       }
       salesByProduct[product_id].totalSales += sales_total;
     });
-
+    for (const key in salesByProduct) {
+      salesByProduct[key].totalSales = salesByProduct[key].totalSales.toLocaleString('en-US', {style: 'currency', currency: 'USD', minimumFractionDigits: 0, maximumFractionDigits: 0});
+    }
     tableData = Object.values(salesByProduct);
     dataKeys = Object.keys(tableData[0]);
   }
