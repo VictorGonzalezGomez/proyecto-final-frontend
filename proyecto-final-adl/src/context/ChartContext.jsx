@@ -81,7 +81,7 @@ const ChartProvider = (props) => {
         setCharts([
                 {
                     id: 1,
-                    title: "Total Sales",
+                    title: "Total Sales by Date",
                     data: totalSalesData,
                 },
                 {   
