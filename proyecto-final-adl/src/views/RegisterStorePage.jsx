@@ -11,9 +11,9 @@ const RegisterStorePage = () => {
 
     return (
         <>
-        <Navbar/>
+
         <RegisterFormStore/>
-        <Footer/>
+
         </>
     );
 };

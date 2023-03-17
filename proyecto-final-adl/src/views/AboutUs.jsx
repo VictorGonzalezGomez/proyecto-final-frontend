@@ -8,14 +8,14 @@ const AboutUs = () => {
     
     return (
         <>
-        <Navbar/>
+
         <div>
         <h1>Hi</h1>
         <p>
             Lorem ipsum dolor sit ame
         </p>
         </div>
-        <Footer/>
+
         </>
     )
 

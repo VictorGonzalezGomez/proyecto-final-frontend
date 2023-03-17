@@ -10,7 +10,7 @@ const RegisterGeneralPage = () => {
 
     return (
       <>
-        <Navbar/>
+  
         <div id="hero-login" className="container col-xl-10 col-xxl-8">
           <div className="row align-items-center g-lg-5 py-5">
             <div className="col-md-10 mx-auto col-lg-5">
@@ -36,7 +36,7 @@ const RegisterGeneralPage = () => {
             </div>
           </div>
         </div>
-        <Footer/>
+    
         </>
     );
 };

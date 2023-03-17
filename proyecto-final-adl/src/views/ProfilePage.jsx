@@ -7,12 +7,12 @@ export default function Gallery () {
     return(
 
         <>
-        <Navbar/>
+        
         <div className="gallery-charts d-flex">
             <Menu/>
             <Profile/>
         </div>
-        <Footer/>
+        
         </>
     )
 }

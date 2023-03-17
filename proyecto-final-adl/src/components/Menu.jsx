@@ -28,12 +28,6 @@ export default function Menu() {
         </NavLink>
       </li>
       <li>
-        <a href="/gallery" className="nav-link text-white">
-          <svg className="bi pe-none me-2" width="16" height="16"></svg>
-          Gallery
-        </a>
-      </li>
-      <li>
       <button className="btn btn-toggle d-inline-flex text-white nav-link align-items-center rounded border-0 collapsed" data-bs-toggle="collapse" data-bs-target="#dashboard-collapse" aria-expanded="false">
           Dashboard
         </button>
