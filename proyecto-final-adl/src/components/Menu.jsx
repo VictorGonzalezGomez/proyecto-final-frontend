@@ -18,13 +18,13 @@ export default function Menu() {
   
     <ul className="nav nav-pills flex-column mb-auto">
       <li className="nav-item">
-        <a href="/" className="nav-link active" aria-current="page">
+        <a href="/gallery" className="nav-link active" aria-current="page">
           <svg className="bi pe-none me-2" width="16" height="16"></svg>
           Home
         </a>
       </li>
       <li>
-        <a href="/dashboard" className="nav-link text-white">
+        <a href="/dashboard/1" className="nav-link text-white">
           <svg className="bi pe-none me-2" width="16" height="16"></svg>
           Dashboard
         </a>

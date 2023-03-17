@@ -10,8 +10,8 @@ function App() {
     <>
     <ChartProvider>
       <Routes>
-        <Route path="/" element={<Gallery />} />
-        <Route path="/dashboard" element={<Dashboard />} />
+        <Route path="/gallery" element={<Gallery />} />
+        <Route path="/dashboard/:chartId" element={<Dashboard />} />
       </Routes>
     </ChartProvider>
     </>

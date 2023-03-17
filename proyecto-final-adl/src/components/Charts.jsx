@@ -14,7 +14,7 @@ import {
 
 export default function Charts() {
     const { charts } = React.useContext(ChartContext)
-
+    console.log(charts)
     ChartJS.register(
       CategoryScale,
       LinearScale,

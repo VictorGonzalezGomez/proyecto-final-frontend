@@ -9,11 +9,11 @@ const ChartProvider = (props) => {
     React.useEffect(() => {
         const getAllData = async () => {
             try {
-                const endpoint = "./sales.json";
+                const endpoint = "/sales.json";
                 const r = await axios.get(endpoint)
-                setSales(r.data.sales)
+                setSales(r.data)
             } catch (e) {
-                alert(e)
+                console.log(e)
             };
         }
         getAllData();
