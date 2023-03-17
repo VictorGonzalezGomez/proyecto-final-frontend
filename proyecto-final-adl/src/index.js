@@ -3,6 +3,10 @@ import ReactDOM from 'react-dom/client';
 import './index.css';
 import App from './App';
 import {BrowserRouter} from 'react-router-dom';
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/private-view
 
 // Bootstrap CSS
 import "bootstrap/dist/css/bootstrap.min.css";
@@ -14,5 +18,9 @@ root.render(
   <BrowserRouter>
     <App />
   </BrowserRouter>
+<<<<<<< HEAD
 );
 
+=======
+);
+>>>>>>> origin/private-view

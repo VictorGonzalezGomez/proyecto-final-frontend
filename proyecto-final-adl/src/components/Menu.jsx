@@ -1,8 +1,13 @@
 import React from "react";
+import { ChartContext } from "../context/ChartContext";
+import { NavLink } from "react-router-dom";
+
 
 export default function Menu() {
+    const { charts } = React.useContext(ChartContext)
+    const setActiveClass = ({ isActive }) => (isActive ? "active" : "unactive");
     return (
-    <div className="d-flex flex-column flex-shrink-0 p-3 text-bg-dark sidebar-sticky position-sticky min-vh-100">
+    <div className="col-lg-2 col-md-3 d-flex flex-column flex-shrink-0 p-3 text-bg-dark sidebar-sticky position-sticky min-vh-100">
           <div className="dropdown">
       <a href="/" className="d-flex align-items-center text-white text-decoration-none dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
         <img src="https://github.com/mdo.png" alt="" width="32" height="32" className="rounded-circle me-2" />
@@ -18,16 +23,26 @@ export default function Menu() {
   
     <ul className="nav nav-pills flex-column mb-auto">
       <li className="nav-item">
-        <a href="/" className="nav-link active" aria-current="page">
-          <svg className="bi pe-none me-2" width="16" height="16"></svg>
-          Home
-        </a>
+        <NavLink to="/gallery" className={`nav-link text-white ${setActiveClass}`}>
+          Gallery
+        </NavLink>
       </li>
-      <li>
-        <a href="/" className="nav-link text-white">
-          <svg className="bi pe-none me-2" width="16" height="16"></svg>
+      <li className="nav-item">
+        <button className="btn btn-toggle d-inline-flex text-white nav-link align-items-center rounded border-0 collapsed" data-bs-toggle="collapse" data-bs-target="#dashboard-collapse" aria-expanded="false">
           Dashboard
-        </a>
+        </button>
+        <div className="collapse" id="dashboard-collapse">
+        <ul className="btn-toggle-nav list-unstyled fw-normal pb-1 small">
+          {charts[0]?.data?.labels?.length !== 0 ? charts.map((chart) => (
+            <li key={chart.id}><NavLink to={`/dashboard/${chart.id}`} className= {`nav-link text-white ${setActiveClass}`}>
+              {chart.title}
+              </NavLink>
+              </li>
+          ))
+          : <li><a href="/" className="d-inline-flex text-decoration-none text-white rounded">No charts yet</a></li>
+          }
+          </ul>
+        </div>
       </li>
     </ul>
     </div>
