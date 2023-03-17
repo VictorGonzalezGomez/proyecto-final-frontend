@@ -28,7 +28,7 @@ export default function Charts() {
     const navigate = useNavigate();
     return (
         // <div className="d-flex gap-3 justify-content-center p-5 m-0 ">
-        <div className="col py-5 px-5 align-items-center text-center">
+        <div className="col-lg-7 col-md-6 p-5 align-items-center text-center">
         <div className="row justify-content-md-center">
           {charts[0]?.data?.labels?.length !== 0 ? charts.map((chart) => (
               <div className="col align-items-center" key={chart.id}>
