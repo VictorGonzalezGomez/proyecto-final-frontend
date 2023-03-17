@@ -1,21 +1,21 @@
 
 import Footer from "../components/Footer";
 import Navbar from "../components/Navbar";
-import RegisterForm from "../components/RegisterForm";
+import RegisterFormStore from "../components/RegisterFormStore";
 
 
 
-const RegisterPage = () => {
+const RegisterStorePage = () => {
 
 
 
     return (
         <>
         <Navbar/>
-        <RegisterForm/>
+        <RegisterFormStore/>
         <Footer/>
         </>
     );
 };
 
-export default RegisterPage;
+export default RegisterStorePage;

@@ -1,4 +1,5 @@
-const EMAIL_FORMAT = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
+const EMAIL_REGEX = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
+const PWD_REGEX = /^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[!@#$%]).{8,24}$/;
 
 const isFormValid = (name, email, collaborators) => {
     
@@ -13,7 +14,7 @@ const isFormValid = (name, email, collaborators) => {
 }
 
 const isEmailValid = (email, collaborators) => {
-  if (!EMAIL_FORMAT.test(email)) {
+  if (!EMAIL_REGEX.test(email)) {
     alert("el correo ingresado no es valido")
     return false;
   }

@@ -1,8 +1,4 @@
-
-
 const Profile = () => {
-
-
 
     return (
       
