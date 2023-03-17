@@ -17,6 +17,7 @@ import Footer from "./components/Footer";
 import Navbar from "./components/Navbar";
 import './index.css';
 import Dashboard from "./views/Dashboard"
+import PrivateRoutes from "./helpers/PrivateRoutes";
 
 
 function App() {
@@ -26,13 +27,19 @@ function App() {
                 <Navbar />
 
                 <Routes>
+                    <Route element={<PrivateRoutes />}>
+                        <Route path="/gallery" element={<Gallery />} />
+                        <Route path="/dashboard/:chartId" element={<Dashboard />} />
+                        <Route path="/gallery" element={<Gallery />} />
+                        <Route path="/profile" element={<Profile />} />
+                    </Route>
                     <Route path="/faq" element={<Faq />} />
                     <Route path="/about-us" element={<AboutUs />} />
                     <Route path="/features" element={<Features />} />
                     <Route path="/" element={<HomePage />} />
                     <Route path="/register" element={<RegisterGeneralPage />} />
-                    <Route path="/gallery" element={<Gallery />} />
-                    <Route path="/dashboard/:chartId" element={<Dashboard />} />
+                    
+                    
                     <Route
                         path="/registeruser"
                         element={<RegisterUserPage />}
@@ -41,8 +48,7 @@ function App() {
                         path="/registerstore"
                         element={<RegisterStorePage />}
                     />
-                    <Route path="/gallery" element={<Gallery />} />
-                    <Route path="/profile" element={<Profile />} />
+                    
                 </Routes>
                 <Footer />
             </ChartProvider>
