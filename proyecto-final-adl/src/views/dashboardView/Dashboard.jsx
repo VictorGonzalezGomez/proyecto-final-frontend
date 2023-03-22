@@ -1,9 +1,8 @@
 import React from "react";
-import Menu from "../components/Menu";
-import TableData from "../components/TableData";
-import Chart from "../components/Chart";
+import TableData from "../../components/dashboard/TableData";
+import Chart from "../../components/dashboard/Chart";
 import { useParams, useNavigate } from "react-router-dom";
-import { ChartContext } from "../context/ChartContext";
+import { ChartContext } from "../../context/ChartContext";
 
 export default function Dashboard() {
   const { chartId } = useParams();
@@ -58,8 +57,7 @@ export default function Dashboard() {
   }
 
   return (
-      <div className="d-flex">
-          <Menu />
+    
           <main className="container-fluid px-5">
               <div className="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom">
                   <h1 className="h2">{chart.title}</h1>
@@ -80,6 +78,6 @@ export default function Dashboard() {
               <h2>Table details</h2>
               <TableData tableData={tableData} dataKeys={dataKeys} />
           </main>
-      </div>
+      
   );
 }

@@ -1,5 +1,5 @@
 
-import RegisterFormStore from "../components/RegisterFormStore";
+import RegisterFormStore from "../../components/landingPage/RegisterFormStore";
 
 
 

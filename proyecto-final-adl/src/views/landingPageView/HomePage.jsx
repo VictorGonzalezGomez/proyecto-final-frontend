@@ -1,5 +1,5 @@
-import analyticsImage from "../assets/img/analytics-people.png";
-import HeroLogin from "../components/HeroLogin";
+import analyticsImage from "../../assets/img/analytics-people.png";
+import HeroLogin from "../../components/landingPage/HeroLogin";
 
 
 const HomePage = () => {

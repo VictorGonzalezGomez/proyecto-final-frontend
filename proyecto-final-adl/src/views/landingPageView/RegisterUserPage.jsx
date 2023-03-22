@@ -1,5 +1,5 @@
 
-import RegisterFormUser from "../components/RegisterFormUser";
+import RegisterFormUser from "../../components/dashboard/RegisterFormUser";
 
 
 

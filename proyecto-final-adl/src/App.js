@@ -1,56 +1,47 @@
 import "./App.css";
-import HomePage from "./views/HomePage";
-import Faq from "./views/FAQ";
-import AboutUs from "./views/AboutUs";
-import Features from "./views/Features";
-import Summary from "./views/Summary";
-import RegisterGeneralPage from "./views/RegisterGeneralPage";
-import RegisterUserPage from "./views/RegisterUserPage";
-import RegisterStorePage from "./views/RegisterStorePage";
+import HomePage from "./views/landingPageView/HomePage";
+import Faq from "./views/landingPageView/FAQ";
+import AboutUs from "./views/landingPageView/AboutUs";
+import Features from "./views/landingPageView/Features";
+import Summary from "./views/dashboardView/Summary";
+import RegisterGeneralPage from "./views/dashboardView/RegisterGeneralPage";
+import RegisterUserPage from "./views/landingPageView/RegisterUserPage";
+import RegisterStorePage from "./views/landingPageView/RegisterStorePage";
 import AuthContexProvider from "./context/AuthContextProvider";
 import ChartProvider from "./context/ChartContext";
 import { Routes, Route } from "react-router-dom";
 import './index.css';
-import Profile from "./components/Profile";
-import Footer from "./components/Footer";
-import Navbar from "./components/Navbar";
-import Dashboard from "./views/Dashboard"
+import Profile from "./components/dashboard/Profile";
+import Dashboard from "./views/dashboardView/Dashboard"
 import PrivateRoutes from "./helpers/PrivateRoutes";
-
+// import LandingPageLayout from "./components/layout/LandingPageLayout";
+import DashboardLayout from "./components/layout/DashboardLayout";
+import LandingPageLayout from "./components/layout/LandingPageLayout";
 
 function App() {
-    return (
-        <AuthContexProvider>
-            <ChartProvider>
-                <Navbar />
+  return (
+    <AuthContexProvider>
+      <ChartProvider>
 
-                <Routes>
-                    <Route element={<PrivateRoutes />}>
-                        <Route path="/summary" element={<Summary />} />
-                        <Route path="/dashboard/:chartId" element={<Dashboard />} />
-                        <Route path="/profile" element={<Profile />} />
-                    </Route>
-                    <Route path="/faq" element={<Faq />} />
-                    <Route path="/about-us" element={<AboutUs />} />
-                    <Route path="/features" element={<Features />} />
-                    <Route path="/" element={<HomePage />} />
-                    <Route path="/register" element={<RegisterGeneralPage />} />
-                    
-                    
-                    <Route
-                        path="/registeruser"
-                        element={<RegisterUserPage />}
-                    />
-                    <Route
-                        path="/registerstore"
-                        element={<RegisterStorePage />}
-                    />
-                    
-                </Routes>
-                <Footer />
-            </ChartProvider>
-        </AuthContexProvider>
-    );
+        <Routes>
+          <Route element={<PrivateRoutes />}>
+            <Route path="/summary" element={< DashboardLayout><Summary/></ DashboardLayout>} />
+              <Route path="/dashboard/:chartId" element={< DashboardLayout><Dashboard/></ DashboardLayout>} />
+              <Route path="/profile" element={< DashboardLayout><Profile/></ DashboardLayout>} />
+            </Route>
+
+            <Route path="/" element={<LandingPageLayout><HomePage/></LandingPageLayout>} />
+            <Route path="/faq" element={<LandingPageLayout><Faq/></LandingPageLayout>} />
+            <Route path="/about-us" element={<LandingPageLayout><AboutUs/></LandingPageLayout>} />
+            <Route path="/features" element={<LandingPageLayout><Features/></LandingPageLayout>} />
+            <Route path="/register" element={<LandingPageLayout><RegisterGeneralPage/></LandingPageLayout>} />  
+            <Route path="/registeruser" element={<LandingPageLayout><RegisterUserPage/></LandingPageLayout>}/>
+            <Route path="/registerstore" element={<LandingPageLayout><RegisterStorePage/></LandingPageLayout>}/>  
+            </Routes>
+
+      </ChartProvider>
+    </AuthContexProvider>
+  );
 }
 
 export default App;
