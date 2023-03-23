@@ -1,8 +1,8 @@
 import React from "react";
 
-import Menu from "../components/Menu"
+import Menu from "../../views/MenuView"
 
-import Profile from "../components/Profile";
+import Profile from "../../views/profile/ProfilePage";
 export default function Gallery () {
     return(
 

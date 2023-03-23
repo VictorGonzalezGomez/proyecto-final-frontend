@@ -1,11 +1,10 @@
 import React from "react";
 import CardCharts from "../../components/dashboard/CardCharts";
-import UserGroupCard from "../../components/dashboard/UserGroupCard";
+
 export default function Summary () {
   return(
-    <div className="gallery-charts d-flex flex-wrap">
+    <div className="gallery-charts d-flex flex-wrap vh-100">
       <CardCharts/>
-      <UserGroupCard/>
     </div>
   );
 }

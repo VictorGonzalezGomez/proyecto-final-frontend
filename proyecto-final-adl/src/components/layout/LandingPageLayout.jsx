@@ -1,5 +1,5 @@
 import React from 'react';
-import Navbar from "../common/Navbar";
+import Navbar from "../common/navbar/Navbar";
 import Footer from "../landingPage/Footer"
 
 const PublicLayout = (props) => {

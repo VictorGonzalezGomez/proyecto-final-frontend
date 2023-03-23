@@ -1,6 +1,6 @@
 import React from 'react';
-import Navbar from "../common/Navbar";
-import Menu from '../dashboard/Menu';
+import Navbar from "../common/navbar/Navbar";
+import Menu from '../../views/MenuView';
 
 const PrivateLayout = (props) => {
 

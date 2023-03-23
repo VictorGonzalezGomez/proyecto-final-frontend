@@ -1,5 +1,5 @@
 import React from "react";
-import { ChartContext } from "../../context/ChartContext";
+import { ChartContext } from "../context/ChartContext";
 import { NavLink } from "react-router-dom";
 
 
@@ -8,7 +8,7 @@ export default function Menu() {
     const { charts } = React.useContext(ChartContext)
     const setActiveClass = ({ isActive }) => (isActive ? "active" : "unactive");
     return (
-    <div className="col-lg-2 col-md-3 d-flex flex-column p-3 text-bg-dark">
+    <div className="col-lg-2 col-md-3 d-flex flex-column p-3 text-bg-dark vh-100">
           <div className="dropdown">
       <a href="/profile" className="d-flex align-items-center text-white text-decoration-none dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
         <img src="https://github.com/mdo.png" alt="" width="32" height="32" className="rounded-circle me-2" />

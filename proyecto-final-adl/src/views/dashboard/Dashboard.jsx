@@ -1,5 +1,5 @@
 import React from "react";
-import TableData from "../../components/dashboard/TableData";
+import TableData from "../../components/TableData";
 import Chart from "../../components/dashboard/Chart";
 import { useParams, useNavigate } from "react-router-dom";
 import { ChartContext } from "../../context/ChartContext";

@@ -1,6 +1,5 @@
 import analyticsImage from "../../assets/img/analytics-people.png";
-import HeroLogin from "../../components/landingPage/HeroLogin";
-
+import HeroLogin from "../../views/landingPage/HeroLogin"
 
 const HomePage = () => {
     return (
