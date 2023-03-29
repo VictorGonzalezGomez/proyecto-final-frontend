@@ -1,6 +1,7 @@
 import React from "react";
 import { ChartContext } from "../context/ChartContext";
 import { NavLink } from "react-router-dom";
+import axios from "axios";
 
 import { useState } from "react";
 
@@ -9,14 +10,21 @@ import Papa from "papaparse";
 export default function Menu() {
     const [file, setFile] = useState(null);
 
+    // create a loading state
+
+    const [loading, setLoading] = useState(false);
+
     const handleFileChange = (event) => {
         setFile(event.target.files[0]);
     };
 
     const handleSubmit = async () => {
+        // create a loading state
+        setLoading(true);
         const csv = await convertToCSV(file);
         const jsonData = await convertToJSON(csv);
         await sendData(jsonData);
+        setLoading(false);
     };
 
     const convertToCSV = (file) => {
@@ -56,21 +64,16 @@ export default function Menu() {
         return jsonData;
     };
 
-    const sendData = (jsonData) => {
-        // Aquí deberás escribir la función que envíe los datos al endpoint en formato JSON
-        return fetch("https://example.com/api/data", {
-            method: "POST",
-            headers: {
-                "Content-Type": "application/json",
-            },
-            body: JSON.stringify(jsonData),
-        })
-            .then((response) => response.json())
-            .then((data) => {
-                console.log(data);
+    // send data function
+
+    const sendData = async (jsonData) => {
+        await axios
+            .post("http://localhost:3000/sales", jsonData)
+            .then((response) => {
+                console.log(response);
             })
             .catch((error) => {
-                console.error(error);
+                console.log(error);
             });
     };
 
@@ -199,21 +202,30 @@ export default function Menu() {
                             ></button>
                         </div>
                         <div className="modal-body">
-                            <div>
-                                <label
-                                    htmlFor="formFileLg"
-                                    className="form-label"
-                                >
-                                    Large file input example
-                                </label>
-                                <input
-                                    className="form-control form-control-lg"
-                                    id="formFileLg"
-                                    type="file"
-                                    accept=".csv"
-                                    onChange={handleFileChange}
-                                />
-                            </div>
+                            {loading ? (
+                                <div className="spinner-border" role="status">
+                                    <span className="visually-hidden">
+                                        Loading...
+                                    </span>
+                                </div>
+                            ) : null}
+                            {!loading && (
+                                <div>
+                                    <label
+                                        htmlFor="formFileLg"
+                                        className="form-label"
+                                    >
+                                        Large file input example
+                                    </label>
+                                    <input
+                                        className="form-control form-control-lg"
+                                        id="formFileLg"
+                                        type="file"
+                                        accept=".csv"
+                                        onChange={handleFileChange}
+                                    />
+                                </div>
+                            )}
                         </div>
                         <div className="modal-footer">
                             <button
@@ -223,7 +235,11 @@ export default function Menu() {
                             >
                                 Close
                             </button>
-                            <button type="button" className="btn btn-primary" onClick={handleSubmit}>
+                            <button
+                                type="button"
+                                className="btn btn-primary"
+                                onClick={handleSubmit}
+                            >
                                 Send Sales
                             </button>
                         </div>
