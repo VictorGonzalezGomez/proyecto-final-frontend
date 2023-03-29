@@ -1,7 +1,8 @@
-
+import React from "react";
 const Profile = () => {
+
     return (
-        <form className="m-5 align-items-center">
+        <div className="col m-5 align-items-center">
             <legend className="fs-2">Profile settings.</legend>
             <div className="row">
                 <label
@@ -96,7 +97,7 @@ const Profile = () => {
                     Save
                 </button>
             </div>
-        </form>
+        </div>
     );
 };
 

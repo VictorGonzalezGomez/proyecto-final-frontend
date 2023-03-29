@@ -54,10 +54,10 @@ const RegisterForm = (props) => {
 
     return (
 
-        <div  class="d-flex align-items-center justify-content-center bg-image">
+        <div  class=" col d-flex align-items-center justify-content-center bg-image bg-secondary">
         <div class="card text-center m-5"  style={{maxWidth: '600px'}}>
             <div class="card-body m-5 px-5">
-                <h5 class="card-title text-uppercase text-center mb-5">CREATE USER ACCOUNT</h5>
+                <h5 class="card-title text-uppercase text-center mb-5">Add New Teammate</h5>
                 <div class="row g-2">
                     <div class="col-md mb-3">
                         <div class="form-floating">
@@ -88,7 +88,7 @@ const RegisterForm = (props) => {
                 <div class="d-grid gap-2">
                     <button type="button" class="fw-bold btn btn-primary btn-lg mb-3" onClick={handleSubmit}>Register</button>
                 </div>
-                <p class="card-text">Have already an account?  <a href="/" class="card-link text-reset fw-bold">Login here</a></p>
+  
             </div>
         </div>
         </div>

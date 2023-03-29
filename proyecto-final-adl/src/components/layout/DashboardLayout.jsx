@@ -7,15 +7,13 @@ const PrivateLayout = (props) => {
         
   return (
     <>
-    <Navbar/>
-    <div className="container-fluid">
-      <div className="row">      
-      <Menu/>
-        {props.children}
-
+      <Navbar/>
+      <div className="container-fluid">
+        <div className="row">      
+          <Menu/>
+          {props.children}
+        </div>
       </div>
-  
-    </div>
     </>
     )
 }
