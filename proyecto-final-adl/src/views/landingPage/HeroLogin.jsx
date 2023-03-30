@@ -94,19 +94,17 @@ const HeroLogin = () => {
                         <div className="row align-items-center g-lg-5 py-5">
                             <div className="col-lg-7 text-center text-lg-start">
                                 <h1 className="display-4 fw-bold lh-1 mb-3">
-                                    Vertically centered hero sign-up form
+                                    ¿Buscando una forma mas sencilla de ver tus ventas?
                                 </h1>
                                 <p className="col-lg-10 fs-4">
-                                    Below is an example form built entirely with
-                                    Bootstrap’s form controls. Each required
-                                    form group has a validation state that can
-                                    be triggered by attempting to submit the
-                                    form without completing it.
+                                 <strong>Registrate </strong> y con tan solo ingresar un archivo ya podras acceder
+                                  a graficos y los KPI mas importantes de tus ventas, ademas tu equipo 
+                                  tendra acceso a esta en tiempo real desde cualquier computador.
                                 </p>
                             </div>
                             {/* hero login form */}
                             <div className="col-md-10 mx-auto col-lg-5">
-                                <div className="form-floating mb-3">
+                                <div className="form-floating mb-3 border-dark">
                                     <input
                                         type="email"
                                         className="form-control"
@@ -154,10 +152,11 @@ const HeroLogin = () => {
                                     className=" w-100 btn btn btn-lg btn-outline-success"
                                     href="/register"
                                     role="button"
-                                >
+                                 >
                                     Register
                                 </a>
                             </div>
+                            
                         </div>
                     </div>
                     {/* end hero login form */}

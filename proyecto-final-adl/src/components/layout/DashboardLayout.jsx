@@ -9,11 +9,13 @@ const PrivateLayout = (props) => {
         
   return (
     <>
-    <Navbar/>
-    <div className="d-flex">
-        <Menu/>
-        {props.children}
-    </div>
+      <Navbar/>
+      <div className="container-fluid">
+        <div className="row">      
+          <Menu/>
+          {props.children}
+        </div>
+      </div>
     </>
     )
 }

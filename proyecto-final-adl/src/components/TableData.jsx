@@ -2,7 +2,7 @@ import React from 'react';
 
 const TableData = ({tableData, dataKeys}) => {
     return (
-      <table className="table table-striped table-hover">
+      <table className="table table-striped table-hover ">
         <thead>
           <tr>
             {dataKeys.length > 0 ? dataKeys.map((key) => (

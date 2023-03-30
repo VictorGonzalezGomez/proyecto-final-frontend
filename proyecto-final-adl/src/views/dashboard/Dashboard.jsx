@@ -58,7 +58,7 @@ export default function Dashboard() {
 
   return (
     
-          <main className="container-fluid px-5">
+          <main className="container-fluid px-5 col ">
               <div className="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom">
                   <h1 className="h2">{chart.title}</h1>
                   <div className="btn-toolbar mb-2 mb-md-0">
@@ -74,7 +74,10 @@ export default function Dashboard() {
                       </button>
                   </div>
               </div>
-              <Chart chart={chart} />
+              <div className="bg-white">
+                 <Chart chart={chart}/>
+              </div>
+             
               <h2>Table details</h2>
               <TableData tableData={tableData} dataKeys={dataKeys} />
           </main>

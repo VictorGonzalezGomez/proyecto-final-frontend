@@ -1,19 +1,14 @@
 
 import RegisterFormUser from "../../components/dashboard/RegisterFormUser";
 
-
-
 const RegisterUserPage = () => {
-
-
-
-    return (
-        <>
+  return (
+    <>
         
-        <RegisterFormUser/>
+      <RegisterFormUser/>
         
-        </>
-    );
+    </>
+  );
 };
 
 export default RegisterUserPage;
