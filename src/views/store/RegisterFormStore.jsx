@@ -17,7 +17,7 @@ const RegisterFormStore = () => {
   const [address, setAddress]= useState("");
   const [password, setPassword]= useState("");
   const [auxPassword, setAuxPassword]= useState("");
-  const [errMsg, setErrMsg] = useState("");
+  // const [errMsg, setErrMsg] = useState("");
 
 
   const handleSubmit = async (e) => {
@@ -26,20 +26,22 @@ const RegisterFormStore = () => {
     const validatePasswordFormat = PWD_REGEX.test(password);
 
     if (!storeName || !rut || !email || !industry || !address || !password || !auxPassword){
-      setErrMsg("All the fields are required ")
+      // setErrMsg("All the fields are required ")
     }
     if (!validateEmailFormat || !validatePasswordFormat) {
-      setErrMsg("The password or the email are not valid");
+      // setErrMsg("The password or the email are not valid");
       return;
     }
     if (password !== auxPassword){
-        setErrMsg("The password do not match");
+        // setErrMsg("The password do not match");
         return;
     }
     try {
       const response = await axios.post(
           REGISTER_STORE_URL,
-        { storeName, rut, email, industry, address, password }
+        { storeName, rut, email, industry, address, password, firstName, lastName }
+  
+   
       );
     
     setFirstName("");
@@ -52,7 +54,9 @@ const RegisterFormStore = () => {
     setEmail("");
     setPassword("");
     setAuxPassword("");
-       
+       console.log('====================================');
+       console.log(response);
+       console.log('====================================');
     } catch (err) {
       if (!err?.response) {
         setErrMsg("No Server Response");

@@ -3,8 +3,8 @@ import axios from "axios";
 
 const RegisterForm = (props) => {
     
-    const EMAIL_REGEX = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
-    const PWD_REGEX = /^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[!@#$%]).{8,24}$/;
+    // const EMAIL_REGEX = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
+    // const PWD_REGEX = /^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[!@#$%]).{8,24}$/;
     const REGISTER_USER_URL="";
 
     const [firstName, setFirstName] = useState("");
@@ -12,7 +12,7 @@ const RegisterForm = (props) => {
     const [email, setEmail]= useState("");
     const [password, setPassword]= useState("");
     const [auxPassword, setAuxPassword]= useState("");
-    const [errMsg, setErrMsg] = useState("");
+    // const [errMsg, setErrMsg] = useState("");
     const handleSubmit = async (e) => {
    
         const validateEmailFormat = EMAIL_REGEX.test(email);
@@ -20,15 +20,15 @@ const RegisterForm = (props) => {
 
          
         if (!firstName || !lastName || !email || !password || !auxPassword){
-            setErrMsg("All the fields are required ")
+            // setErrMsg("All the fields are required ")
          }
 
         if (!validateEmailFormat || !validatePasswordFormat) {
-          setErrMsg("The password or the email are not valid");
+        //   setErrMsg("The password or the email are not valid");
           return;
         }
         if (password !== auxPassword){
-            setErrMsg("the passwords are not the same");
+            // setErrMsg("the passwords are not the same");
             return;
         }
         try {
@@ -42,7 +42,9 @@ const RegisterForm = (props) => {
         setEmail("");
         setPassword("");
         setAuxPassword("");
-           
+          console.log('====================================');
+          console.log(response);
+          console.log('===================================='); 
         } catch (err) {
           if (!err?.response) {
             setErrMsg("No Server Response");
